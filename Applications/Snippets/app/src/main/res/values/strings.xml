@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">code</string>
+
+
+    <string name="sel_simple_sample">Simple Sample</string>
+    <string name="sel_card_view_sample">Card view Sample</string>
+
 </resources>
