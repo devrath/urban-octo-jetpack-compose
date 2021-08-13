@@ -24,7 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-class MainActivity : ComponentActivity() {
+class CardViewDemoActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -72,37 +72,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @Composable
-    fun buttonClickSample() {
-        Column(
-            Modifier
-                .fillMaxSize()
-                .background(Color.Gray),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Column(
-                Modifier
-                    .background(Color.Gray)
-                    .border(2.dp, Color.Red, shape = RectangleShape)
-                    .padding(all = 50.dp),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Button(onClick = {
-                    Toast.makeText(this@MainActivity,"Hello-1",Toast.LENGTH_LONG).show()
-                }) {
-                    Text(text = "Button-1")
-                }
-                Spacer(modifier = Modifier.height(20.dp))
-                Button(onClick = {
-                    Toast.makeText(this@MainActivity,"Hello-2",Toast.LENGTH_LONG).show()
-                }) {
-                    Text(text = "Button-2")
-                }
-            }
 
-        }
-    }
 }
 
