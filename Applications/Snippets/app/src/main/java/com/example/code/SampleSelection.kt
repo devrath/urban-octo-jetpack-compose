@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import com.example.code.demos.ApplyingFontsActivity
 import com.example.code.demos.CardViewDemoActivity
 import com.example.code.demos.SampleDemoActivity
 
@@ -68,6 +69,16 @@ fun CollectionOfOptions(){
         Modifier.fillMaxWidth()
     ) {
         Text(text = context.resources.getString(R.string.sel_card_view_sample))
+    }
+
+    Spacer(modifier = Modifier.height(10.dp))
+
+    Button(onClick = {
+        context.startActivity(Intent(context, ApplyingFontsActivity::class.java))
+    },  modifier =
+    Modifier.fillMaxWidth()
+    ) {
+        Text(text = context.resources.getString(R.string.sel_applying_fonts))
     }
 
 }

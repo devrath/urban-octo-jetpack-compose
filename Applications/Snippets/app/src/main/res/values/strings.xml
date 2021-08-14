@@ -3,6 +3,7 @@
 
 
     <string name="sel_simple_sample">Simple Sample</string>
-    <string name="sel_card_view_sample">Card view Sample</string>
+    <string name="sel_card_view_sample">Card view</string>
+    <string name="sel_applying_fonts">Applying Fonts</string>
 
 </resources>

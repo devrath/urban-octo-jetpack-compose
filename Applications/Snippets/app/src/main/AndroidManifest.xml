@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".demos.CardViewDemoActivity"/>
         <activity android:name=".demos.SampleDemoActivity"/>
+        <activity android:name=".demos.ApplyingFontsActivity"/>
     </application>
 
 </manifest>
