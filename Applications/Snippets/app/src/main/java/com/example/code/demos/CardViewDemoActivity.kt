@@ -15,6 +15,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.painter.Painter
@@ -30,14 +31,26 @@ class CardViewDemoActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ImageCard(
-                title = "Hello World",
-                "This is a card",
-                painter = painterResource(id = R.drawable.mario)
-            )
+            rootLayout()
         }
     }
 
+}
+
+@Composable
+fun rootLayout(){
+    Column(modifier = Modifier
+        .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        val title = "Hello World"
+        val content = "This is a card"
+        val painter: Painter = painterResource(id = R.drawable.mario)
+
+
+        ImageCard(title = title, contentDescription = content, painter = painter)
+    }
 }
 
 @Composable
@@ -48,10 +61,12 @@ fun ImageCard(
     modifier : Modifier = Modifier
 ) {
     Card(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(0.5f),
         shape = RoundedCornerShape(5.dp),
         elevation = 5.dp
     ) {
+        /* Using the Box widget is like a stack, whatever we add first will be at the bottom of the stack followed by one after another
+         * This is useful in adding views one above another */
         Box(
             modifier = Modifier.height(200.dp)
         ) {
@@ -59,6 +74,18 @@ fun ImageCard(
                 painter = painter,
                 contentDescription = contentDescription,
                 contentScale = ContentScale.Crop
+            )
+            Spacer(modifier = Modifier
+                .fillMaxSize()
+                .background(
+                    Brush.verticalGradient(
+                        colors = listOf(
+                            Color.Transparent,
+                            Color.Black
+                        ),
+                        startY = 280f
+                    )
+                )
             )
             Box(
                 modifier = Modifier
