@@ -20,8 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardViewDemoActivity"/>
-        <activity android:name=".SampleDemoActivity"/>
+        <activity android:name=".demos.CardViewDemoActivity"/>
+        <activity android:name=".demos.SampleDemoActivity"/>
     </application>
 
 </manifest>

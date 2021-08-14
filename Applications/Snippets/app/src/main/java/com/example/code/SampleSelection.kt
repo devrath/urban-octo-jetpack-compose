@@ -14,6 +14,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import com.example.code.demos.CardViewDemoActivity
+import com.example.code.demos.SampleDemoActivity
 
 class SampleSelection : ComponentActivity() {
 
@@ -51,7 +53,7 @@ fun CollectionOfOptions(){
     val context = LocalContext.current
 
     Button(onClick = {
-        context.startActivity(Intent(context, CardViewDemoActivity::class.java))
+        context.startActivity(Intent(context, SampleDemoActivity::class.java))
     },  modifier = 
         Modifier.fillMaxWidth()
     ) {
@@ -61,7 +63,7 @@ fun CollectionOfOptions(){
     Spacer(modifier = Modifier.height(10.dp))
 
     Button(onClick = {
-        context.startActivity(Intent(context,SampleDemoActivity::class.java))
+        context.startActivity(Intent(context, CardViewDemoActivity::class.java))
     },  modifier =
         Modifier.fillMaxWidth()
     ) {
