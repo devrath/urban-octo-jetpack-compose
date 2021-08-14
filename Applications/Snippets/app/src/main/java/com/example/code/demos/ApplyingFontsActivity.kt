@@ -58,7 +58,7 @@ fun SetText() {
 
 @Composable
 fun TestText() {
-    
+
     val fontFamily = FontFamily(
         Font(R.font.lexend_bold, FontWeight.Bold),
         Font(R.font.lexend_extrabold, FontWeight.ExtraBold),
@@ -88,7 +88,7 @@ fun TestText() {
                         fontSize = 20.sp
                     )
                  ){
-                    append("ple")
+                    append("le")
                  }
                  withStyle(
                     style = SpanStyle(
