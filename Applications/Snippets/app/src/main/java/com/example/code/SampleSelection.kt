@@ -8,6 +8,7 @@ import com.example.code.demos.buttonComposable.ButtonComposable
 import com.example.code.demos.decouplingComposables.DecoupledComposable
 import com.example.code.demos.helloWorld.HelloWorldActivity
 import com.example.code.demos.modifiers.ModifiersActivity
+import com.example.code.demos.surfaceComposable.SurfaceComposableActivity
 import com.example.code.extensions.openActivity
 
 class SampleSelection : AppCompatActivity() {
@@ -28,6 +29,7 @@ class SampleSelection : AppCompatActivity() {
             btnButtonComposableId.setOnClickListener { openActivity(ButtonComposable::class.java) }
             btnModifiersId.setOnClickListener { openActivity(ModifiersActivity::class.java) }
             btnApplyStyleId.setOnClickListener { openActivity(ApplyStyleActivity::class.java) }
+            btnSurfaceComposableId.setOnClickListener { openActivity(SurfaceComposableActivity::class.java) }
         }
     }
 

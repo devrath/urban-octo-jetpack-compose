@@ -13,5 +13,6 @@
     <string name="str_button_clicked">Button clicked !!</string>
     <string name="modifiers_demo">Modifiers Demo</string>
     <string name="apply_style">Apply Style</string>
+    <string name="surface_composable">Surface Composable</string>
 
 </resources>

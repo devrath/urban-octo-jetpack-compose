@@ -42,5 +42,11 @@
             android:layout_height="wrap_content"
             android:text="@string/apply_style" />
 
+        <Button
+            android:id="@+id/btnSurfaceComposableId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/surface_composable" />
+
     </LinearLayout>
 </ScrollView>

@@ -25,6 +25,7 @@
         <activity android:name=".demos.buttonComposable.ButtonComposable"/>
         <activity android:name=".demos.modifiers.ModifiersActivity"/>
         <activity android:name=".demos.applyingStyle.ApplyStyleActivity"/>
+        <activity android:name=".demos.surfaceComposable.SurfaceComposableActivity"/>
     </application>
 
 </manifest>
