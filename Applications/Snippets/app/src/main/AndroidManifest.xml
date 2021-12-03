@@ -24,6 +24,7 @@
         <activity android:name=".demos.decouplingComposables.DecoupledComposable"/>
         <activity android:name=".demos.buttonComposable.ButtonComposable"/>
         <activity android:name=".demos.modifiers.ModifiersActivity"/>
+        <activity android:name=".demos.applyingStyle.ApplyStyleActivity"/>
     </application>
 
 </manifest>
