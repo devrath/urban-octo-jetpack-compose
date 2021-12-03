@@ -1,84 +1,28 @@
 package com.example.code
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
-import com.example.code.demos.ApplyingFontsActivity
-import com.example.code.demos.CardViewDemoActivity
-import com.example.code.demos.SampleDemoActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.example.code.databinding.ActivitySampleSelectionBinding
+import com.example.code.demos.decouplingComposables.DecoupledComposable
+import com.example.code.demos.helloWorld.HelloWorldActivity
+import com.example.code.extensions.openActivity
 
-class SampleSelection : ComponentActivity() {
+class SampleSelection : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySampleSelectionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivitySampleSelectionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setOnClickListener()
+    }
 
-        setContent {
-            ScrollableOptions()
+    private fun setOnClickListener() {
+        binding.apply {
+            btnHelloWorldId.setOnClickListener { openActivity(HelloWorldActivity::class.java) }
+            btnDecoupleComposableId.setOnClickListener { openActivity(DecoupledComposable::class.java) }
         }
-    }
-
-}
-
-@Composable
-fun ScrollableOptions(){
-    Column(
-        modifier = Modifier
-            // Add a scroll for the views
-            .verticalScroll(rememberScrollState())
-            // Fill to entire parent
-            .fillMaxSize()
-            // Add a padding of 10 around
-            .padding(10.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ){
-        CollectionOfOptions()
-    }
-}
-
-@Composable
-fun CollectionOfOptions(){
-
-    // Get the local context
-    val context = LocalContext.current
-
-    Button(onClick = {
-        context.startActivity(Intent(context, SampleDemoActivity::class.java))
-    },  modifier = 
-        Modifier.fillMaxWidth()
-    ) {
-        Text(text = context.resources.getString(R.string.sel_simple_sample))
-    }
-    
-    Spacer(modifier = Modifier.height(10.dp))
-
-    Button(onClick = {
-        context.startActivity(Intent(context, CardViewDemoActivity::class.java))
-    },  modifier =
-        Modifier.fillMaxWidth()
-    ) {
-        Text(text = context.resources.getString(R.string.sel_card_view_sample))
-    }
-
-    Spacer(modifier = Modifier.height(10.dp))
-
-    Button(onClick = {
-        context.startActivity(Intent(context, ApplyingFontsActivity::class.java))
-    },  modifier =
-    Modifier.fillMaxWidth()
-    ) {
-        Text(text = context.resources.getString(R.string.sel_applying_fonts))
     }
 
 }

@@ -1,24 +1,17 @@
-package com.example.code.demos
+package com.example.code.demos.helloWorld
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
 
 class HelloWorldActivity : ComponentActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GreetingScreen("Hello World")
+            Text(text = "Hello World")
         }
     }
-
-    @Composable
-    private fun GreetingScreen(displayText: String) {
-        Text(text = displayText)
-    }
-
 
 }

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Code">
         <activity
-            android:name=".demos.HelloWorldActivity"
+            android:name=".SampleSelection"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Code.NoActionBar">
@@ -20,9 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".demos.CardViewDemoActivity"/>
-        <activity android:name=".demos.SampleDemoActivity"/>
-        <activity android:name=".demos.ApplyingFontsActivity"/>
+        <activity android:name=".demos.decouplingComposables.DecoupledComposable"/>
     </application>
 
 </manifest>
