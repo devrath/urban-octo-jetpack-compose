@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Code">
         <activity
-            android:name=".SampleSelection"
+            android:name=".demos.HelloWorldActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Code.NoActionBar">
