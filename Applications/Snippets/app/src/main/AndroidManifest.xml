@@ -23,6 +23,7 @@
         <activity android:name=".demos.helloWorld.HelloWorldActivity"/>
         <activity android:name=".demos.decouplingComposables.DecoupledComposable"/>
         <activity android:name=".demos.buttonComposable.ButtonComposable"/>
+        <activity android:name=".demos.modifiers.ModifiersActivity"/>
     </application>
 
 </manifest>

@@ -11,5 +11,6 @@
 
     <string name="str_click_here">Click Here !!</string>
     <string name="str_button_clicked">Button clicked !!</string>
+    <string name="modifiers_demo">Modifiers Demo</string>
 
 </resources>

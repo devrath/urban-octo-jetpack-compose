@@ -6,6 +6,7 @@ import com.example.code.databinding.ActivitySampleSelectionBinding
 import com.example.code.demos.buttonComposable.ButtonComposable
 import com.example.code.demos.decouplingComposables.DecoupledComposable
 import com.example.code.demos.helloWorld.HelloWorldActivity
+import com.example.code.demos.modifiers.ModifiersActivity
 import com.example.code.extensions.openActivity
 
 class SampleSelection : AppCompatActivity() {
@@ -24,6 +25,7 @@ class SampleSelection : AppCompatActivity() {
             btnHelloWorldId.setOnClickListener { openActivity(HelloWorldActivity::class.java) }
             btnDecoupleComposableId.setOnClickListener { openActivity(DecoupledComposable::class.java) }
             btnButtonComposableId.setOnClickListener { openActivity(ButtonComposable::class.java) }
+            btnModifiersId.setOnClickListener { openActivity(ModifiersActivity::class.java) }
         }
     }
 
