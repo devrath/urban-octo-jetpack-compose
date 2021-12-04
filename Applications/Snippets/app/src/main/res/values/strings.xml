@@ -17,5 +17,6 @@
     <string name="wrapping_the_composable">Wrapping The Composable</string>
     <string name="align_the_composable">Align the Composable</string>
     <string name="multiple_composables">Multiple Composables</string>
+    <string name="reusing_composable">Reusing Composable</string>
 
 </resources>

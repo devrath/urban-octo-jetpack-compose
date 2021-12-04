@@ -1,4 +1,4 @@
-package com.example.code.demos.decouplingComposables
+package com.example.code.demos.decouplingComposable
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

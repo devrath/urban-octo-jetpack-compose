@@ -66,5 +66,11 @@
             android:layout_height="wrap_content"
             android:text="@string/multiple_composables" />
 
+        <Button
+            android:id="@+id/btnRReuseComposableId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reusing_composable" />
+
     </LinearLayout>
 </ScrollView>

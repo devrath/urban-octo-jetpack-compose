@@ -6,10 +6,11 @@ import com.example.code.databinding.ActivitySampleSelectionBinding
 import com.example.code.demos.aligningComposable.AlignComposableActivity
 import com.example.code.demos.applyingStyle.ApplyStyleActivity
 import com.example.code.demos.buttonComposable.ButtonComposable
-import com.example.code.demos.decouplingComposables.DecoupledComposable
+import com.example.code.demos.decouplingComposable.DecoupledComposable
 import com.example.code.demos.helloWorld.HelloWorldActivity
 import com.example.code.demos.modifiers.ModifiersActivity
-import com.example.code.demos.multipleComposables.MultipleComposableActivity
+import com.example.code.demos.multipleComposable.MultipleComposableActivity
+import com.example.code.demos.reusingComposable.ReusingComposableActivity
 import com.example.code.demos.surfaceComposable.SurfaceComposableActivity
 import com.example.code.demos.wrappingContentComposable.WrapComposableActivity
 import com.example.code.extensions.openActivity
@@ -36,6 +37,7 @@ class SampleSelection : AppCompatActivity() {
             btnWrapComposableId.setOnClickListener { openActivity(WrapComposableActivity::class.java) }
             btnAlignComposableId.setOnClickListener { openActivity(AlignComposableActivity::class.java) }
             btnMultipleComposableId.setOnClickListener { openActivity(MultipleComposableActivity::class.java) }
+            btnRReuseComposableId.setOnClickListener { openActivity(ReusingComposableActivity::class.java) }
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.code.demos.multipleComposables
+package com.example.code.demos.reusingComposable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,9 +16,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.code.R
 
-class MultipleComposableActivity : ComponentActivity(){
+class ReusingComposableActivity : ComponentActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,36 +39,28 @@ class MultipleComposableActivity : ComponentActivity(){
             Column(modifier = Modifier.wrapContentSize(
                 align = Alignment.Center
             )) {
-                Text(
-                    text = "Text-1",
-                    modifier = Modifier
-                        .wrapContentSize(
-                            align = Alignment.Center
-                        )
-                        .background(color = Color.Blue)
-                        .padding(20.dp),
-                    style = TextStyle(
-                        color = Color.White,
-                        fontSize = 21.sp
-                    )
-                )
-
-                Text(
-                    text = "Text-2",
-                    modifier = Modifier
-                        .wrapContentSize(
-                            align = Alignment.Center
-                        )
-                        .background(color = Color.Red)
-                        .padding(20.dp),
-                    style = TextStyle(
-                        color = Color.White,
-                        fontSize = 21.sp
-                    )
-                )
+                ReusedText(text =  "Text-1",color = Color.Blue)
+                ReusedText(text =  "Text-2",color = Color.Red)
             }
 
         }
+    }
+
+    @Composable
+    private fun ReusedText(text: String, color: Color){
+        Text(
+            text = text,
+            modifier = Modifier
+                .wrapContentSize(
+                    align = Alignment.Center
+                )
+                .background(color = color)
+                .padding(20.dp),
+            style = TextStyle(
+                color = Color.White,
+                fontSize = 21.sp
+            )
+        )
     }
 
 

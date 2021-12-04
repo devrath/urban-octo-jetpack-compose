@@ -1,4 +1,4 @@
-package com.example.code.demos.decouplingComposables
+package com.example.code.demos.decouplingComposable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

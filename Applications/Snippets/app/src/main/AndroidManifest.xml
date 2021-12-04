@@ -21,14 +21,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".demos.helloWorld.HelloWorldActivity"/>
-        <activity android:name=".demos.decouplingComposables.DecoupledComposable"/>
+        <activity android:name=".demos.decouplingComposable.DecoupledComposable"/>
         <activity android:name=".demos.buttonComposable.ButtonComposable"/>
         <activity android:name=".demos.modifiers.ModifiersActivity"/>
         <activity android:name=".demos.applyingStyle.ApplyStyleActivity"/>
         <activity android:name=".demos.surfaceComposable.SurfaceComposableActivity"/>
         <activity android:name=".demos.wrappingContentComposable.WrapComposableActivity"/>
         <activity android:name=".demos.aligningComposable.AlignComposableActivity"/>
-        <activity android:name=".demos.multipleComposables.MultipleComposableActivity"/>
+        <activity android:name=".demos.multipleComposable.MultipleComposableActivity"/>
+        <activity android:name=".demos.reusingComposable.ReusingComposableActivity"/>
     </application>
 
 </manifest>
