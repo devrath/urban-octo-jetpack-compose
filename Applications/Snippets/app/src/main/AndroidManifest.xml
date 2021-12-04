@@ -30,6 +30,7 @@
         <activity android:name=".demos.aligningComposable.AlignComposableActivity"/>
         <activity android:name=".demos.multipleComposable.MultipleComposableActivity"/>
         <activity android:name=".demos.reusingComposable.ReusingComposableActivity"/>
+        <activity android:name=".demos.arrangeAlignComposable.ArrangeAlignComposableActivity"/>
     </application>
 
 </manifest>

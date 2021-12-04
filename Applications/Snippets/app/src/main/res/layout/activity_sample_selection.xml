@@ -67,10 +67,16 @@
             android:text="@string/multiple_composables" />
 
         <Button
-            android:id="@+id/btnRReuseComposableId"
+            android:id="@+id/btnReuseComposableId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/reusing_composable" />
+
+        <Button
+            android:id="@+id/btnArrangeAlignComposableId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/arrange_align_composable" />
 
     </LinearLayout>
 </ScrollView>

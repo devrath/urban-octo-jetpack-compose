@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.code.databinding.ActivitySampleSelectionBinding
 import com.example.code.demos.aligningComposable.AlignComposableActivity
 import com.example.code.demos.applyingStyle.ApplyStyleActivity
+import com.example.code.demos.arrangeAlignComposable.ArrangeAlignComposableActivity
 import com.example.code.demos.buttonComposable.ButtonComposable
 import com.example.code.demos.decouplingComposable.DecoupledComposable
 import com.example.code.demos.helloWorld.HelloWorldActivity
@@ -37,7 +38,8 @@ class SampleSelection : AppCompatActivity() {
             btnWrapComposableId.setOnClickListener { openActivity(WrapComposableActivity::class.java) }
             btnAlignComposableId.setOnClickListener { openActivity(AlignComposableActivity::class.java) }
             btnMultipleComposableId.setOnClickListener { openActivity(MultipleComposableActivity::class.java) }
-            btnRReuseComposableId.setOnClickListener { openActivity(ReusingComposableActivity::class.java) }
+            btnReuseComposableId.setOnClickListener { openActivity(ReusingComposableActivity::class.java) }
+            btnArrangeAlignComposableId.setOnClickListener { openActivity(ArrangeAlignComposableActivity::class.java) }
         }
     }
 

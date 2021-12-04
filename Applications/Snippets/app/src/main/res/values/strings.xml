@@ -18,5 +18,6 @@
     <string name="align_the_composable">Align the Composable</string>
     <string name="multiple_composables">Multiple Composables</string>
     <string name="reusing_composable">Reusing Composable</string>
+    <string name="arrange_align_composable">Arrange Align Composable</string>
 
 </resources>
