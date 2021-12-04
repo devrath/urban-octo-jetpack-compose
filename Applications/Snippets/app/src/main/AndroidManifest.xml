@@ -31,6 +31,7 @@
         <activity android:name=".demos.multipleComposable.MultipleComposableActivity"/>
         <activity android:name=".demos.reusingComposable.ReusingComposableActivity"/>
         <activity android:name=".demos.arrangeAlignComposable.ArrangeAlignComposableActivity"/>
+        <activity android:name=".demos.nestViewsComposable.NestViewComposableActivity"/>
     </application>
 
 </manifest>

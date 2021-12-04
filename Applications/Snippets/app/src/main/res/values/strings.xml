@@ -19,5 +19,6 @@
     <string name="multiple_composables">Multiple Composables</string>
     <string name="reusing_composable">Reusing Composable</string>
     <string name="arrange_align_composable">Arrange Align Composable</string>
+    <string name="nested_views_composable">Nested views composable</string>
 
 </resources>

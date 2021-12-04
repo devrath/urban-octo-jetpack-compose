@@ -11,6 +11,7 @@ import com.example.code.demos.decouplingComposable.DecoupledComposable
 import com.example.code.demos.helloWorld.HelloWorldActivity
 import com.example.code.demos.modifiers.ModifiersActivity
 import com.example.code.demos.multipleComposable.MultipleComposableActivity
+import com.example.code.demos.nestViewsComposable.NestViewComposableActivity
 import com.example.code.demos.reusingComposable.ReusingComposableActivity
 import com.example.code.demos.surfaceComposable.SurfaceComposableActivity
 import com.example.code.demos.wrappingContentComposable.WrapComposableActivity
@@ -40,6 +41,7 @@ class SampleSelection : AppCompatActivity() {
             btnMultipleComposableId.setOnClickListener { openActivity(MultipleComposableActivity::class.java) }
             btnReuseComposableId.setOnClickListener { openActivity(ReusingComposableActivity::class.java) }
             btnArrangeAlignComposableId.setOnClickListener { openActivity(ArrangeAlignComposableActivity::class.java) }
+            btnNestedViewComposableId.setOnClickListener { openActivity(NestViewComposableActivity::class.java) }
         }
     }
 
