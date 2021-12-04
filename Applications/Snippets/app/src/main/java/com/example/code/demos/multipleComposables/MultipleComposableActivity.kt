@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -38,33 +36,39 @@ class MultipleComposableActivity : ComponentActivity(){
             .fillMaxSize()
             .background(color = Color.Gray),
         ) {
-            Text(
-                text = "Text-1",
-                modifier = Modifier
-                    .wrapContentSize(
-                        align = Alignment.Center
-                    )
-                    .background(color = Color.Blue)
-                    .padding(20.dp),
-                style = TextStyle(
-                    color = Color.White,
-                    fontSize = 21.sp
-                )
-            )
 
-            Text(
-                text = "Text-2",
-                modifier = Modifier
-                    .wrapContentSize(
-                        align = Alignment.Center
+            Column(modifier = Modifier.wrapContentSize(
+                align = Alignment.Center
+            )) {
+                Text(
+                    text = "Text-1",
+                    modifier = Modifier
+                        .wrapContentSize(
+                            align = Alignment.Center
+                        )
+                        .background(color = Color.Blue)
+                        .padding(20.dp),
+                    style = TextStyle(
+                        color = Color.White,
+                        fontSize = 21.sp
                     )
-                    .background(color = Color.Red)
-                    .padding(20.dp),
-                style = TextStyle(
-                    color = Color.White,
-                    fontSize = 21.sp
                 )
-            )
+
+                Text(
+                    text = "Text-2",
+                    modifier = Modifier
+                        .wrapContentSize(
+                            align = Alignment.Center
+                        )
+                        .background(color = Color.Red)
+                        .padding(20.dp),
+                    style = TextStyle(
+                        color = Color.White,
+                        fontSize = 21.sp
+                    )
+                )
+            }
+
         }
     }
 
