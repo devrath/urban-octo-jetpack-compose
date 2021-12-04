@@ -60,5 +60,11 @@
             android:layout_height="wrap_content"
             android:text="@string/align_the_composable" />
 
+        <Button
+            android:id="@+id/btnMultipleComposableId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multiple_composables" />
+
     </LinearLayout>
 </ScrollView>
