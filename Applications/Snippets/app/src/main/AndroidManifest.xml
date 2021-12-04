@@ -27,6 +27,7 @@
         <activity android:name=".demos.applyingStyle.ApplyStyleActivity"/>
         <activity android:name=".demos.surfaceComposable.SurfaceComposableActivity"/>
         <activity android:name=".demos.wrappingContentComposable.WrapComposableActivity"/>
+        <activity android:name=".demos.aligningComposable.AlignComposableActivity"/>
     </application>
 
 </manifest>

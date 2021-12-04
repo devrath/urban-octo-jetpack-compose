@@ -3,6 +3,7 @@ package com.example.code
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.code.databinding.ActivitySampleSelectionBinding
+import com.example.code.demos.aligningComposable.AlignComposableActivity
 import com.example.code.demos.applyingStyle.ApplyStyleActivity
 import com.example.code.demos.buttonComposable.ButtonComposable
 import com.example.code.demos.decouplingComposables.DecoupledComposable
@@ -32,6 +33,7 @@ class SampleSelection : AppCompatActivity() {
             btnApplyStyleId.setOnClickListener { openActivity(ApplyStyleActivity::class.java) }
             btnSurfaceComposableId.setOnClickListener { openActivity(SurfaceComposableActivity::class.java) }
             btnWrapComposableId.setOnClickListener { openActivity(WrapComposableActivity::class.java) }
+            btnAlignComposableId.setOnClickListener { openActivity(AlignComposableActivity::class.java) }
         }
     }
 
