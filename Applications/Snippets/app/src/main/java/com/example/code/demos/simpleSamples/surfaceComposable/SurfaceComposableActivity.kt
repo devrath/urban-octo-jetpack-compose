@@ -1,4 +1,4 @@
-package com.example.code.demos.surfaceComposable
+package com.example.code.demos.simpleSamples.surfaceComposable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color

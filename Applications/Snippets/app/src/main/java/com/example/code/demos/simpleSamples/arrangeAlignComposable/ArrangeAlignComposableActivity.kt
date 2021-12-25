@@ -1,4 +1,4 @@
-package com.example.code.demos.arrangeAlignComposable
+package com.example.code.demos.simpleSamples.arrangeAlignComposable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

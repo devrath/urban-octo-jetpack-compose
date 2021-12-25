@@ -1,4 +1,4 @@
-package com.example.code.demos.buttonComposable
+package com.example.code.demos.simpleSamples.buttonComposable
 
 import android.os.Bundle
 import android.widget.Toast

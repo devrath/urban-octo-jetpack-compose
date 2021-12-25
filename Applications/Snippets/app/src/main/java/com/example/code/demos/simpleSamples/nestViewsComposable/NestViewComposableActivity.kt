@@ -1,4 +1,4 @@
-package com.example.code.demos.nestViewsComposable
+package com.example.code.demos.simpleSamples.nestViewsComposable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

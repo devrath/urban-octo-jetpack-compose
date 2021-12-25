@@ -1,16 +1,15 @@
-package com.example.code.demos.helloWorld
+package com.example.code.demos.simpleSamples.decouplingComposable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.Text
 
-class HelloWorldActivity : ComponentActivity(){
+class DecoupledComposable : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Text(text = "Hello World")
+            GreetingScreen("Hello World")
         }
     }
 
