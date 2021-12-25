@@ -20,5 +20,7 @@
     <string name="reusing_composable">Reusing Composable</string>
     <string name="arrange_align_composable">Arrange Align Composable</string>
     <string name="nested_views_composable">Nested views composable</string>
+    <string name="title_activity_dynamic_data_list">DynamicDataList</string>
+    <string name="dynamic_views">Dynamic Views</string>
 
 </resources>

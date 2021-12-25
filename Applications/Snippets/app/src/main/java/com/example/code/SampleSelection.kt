@@ -8,6 +8,7 @@ import com.example.code.demos.simpleSamples.applyingStyle.ApplyStyleActivity
 import com.example.code.demos.simpleSamples.arrangeAlignComposable.ArrangeAlignComposableActivity
 import com.example.code.demos.simpleSamples.buttonComposable.ButtonComposable
 import com.example.code.demos.simpleSamples.decouplingComposable.DecoupledComposable
+import com.example.code.demos.simpleSamples.displayDynamicData.DynamicDataList
 import com.example.code.demos.simpleSamples.helloWorld.HelloWorldActivity
 import com.example.code.demos.simpleSamples.modifiers.ModifiersActivity
 import com.example.code.demos.simpleSamples.multipleComposable.MultipleComposableActivity
@@ -42,6 +43,7 @@ class SampleSelection : AppCompatActivity() {
             btnReuseComposableId.setOnClickListener { openActivity(ReusingComposableActivity::class.java) }
             btnArrangeAlignComposableId.setOnClickListener { openActivity(ArrangeAlignComposableActivity::class.java) }
             btnNestedViewComposableId.setOnClickListener { openActivity(NestViewComposableActivity::class.java) }
+            btnDynamicViewsId.setOnClickListener { openActivity(DynamicDataList::class.java) }
         }
     }
 

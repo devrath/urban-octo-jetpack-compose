@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.code">
+    package="com.example.code" >
 
     <application
         android:allowBackup="true"
@@ -8,30 +8,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Code">
+        android:theme="@style/Theme.Code" >
         <activity
             android:name=".SampleSelection"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Code.NoActionBar">
+            android:theme="@style/Theme.Code.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.code.demos.simpleSamples.helloWorld.HelloWorldActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.decouplingComposable.DecoupledComposable"/>
-        <activity android:name="com.example.code.demos.simpleSamples.buttonComposable.ButtonComposable"/>
-        <activity android:name="com.example.code.demos.simpleSamples.modifiers.ModifiersActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.applyingStyle.ApplyStyleActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.surfaceComposable.SurfaceComposableActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.wrappingContentComposable.WrapComposableActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.aligningComposable.AlignComposableActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.multipleComposable.MultipleComposableActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.reusingComposable.ReusingComposableActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.arrangeAlignComposable.ArrangeAlignComposableActivity"/>
-        <activity android:name="com.example.code.demos.simpleSamples.nestViewsComposable.NestViewComposableActivity"/>
+        <activity android:name=".demos.simpleSamples.helloWorld.HelloWorldActivity" />
+        <activity android:name=".demos.simpleSamples.decouplingComposable.DecoupledComposable" />
+        <activity android:name=".demos.simpleSamples.buttonComposable.ButtonComposable" />
+        <activity android:name=".demos.simpleSamples.modifiers.ModifiersActivity" />
+        <activity android:name=".demos.simpleSamples.applyingStyle.ApplyStyleActivity" />
+        <activity android:name=".demos.simpleSamples.surfaceComposable.SurfaceComposableActivity" />
+        <activity android:name=".demos.simpleSamples.wrappingContentComposable.WrapComposableActivity" />
+        <activity android:name=".demos.simpleSamples.aligningComposable.AlignComposableActivity" />
+        <activity android:name=".demos.simpleSamples.multipleComposable.MultipleComposableActivity" />
+        <activity android:name=".demos.simpleSamples.reusingComposable.ReusingComposableActivity" />
+        <activity android:name=".demos.simpleSamples.arrangeAlignComposable.ArrangeAlignComposableActivity" />
+        <activity android:name=".demos.simpleSamples.nestViewsComposable.NestViewComposableActivity" />
+        <activity android:name=".demos.simpleSamples.displayDynamicData.DynamicDataList"/>
+
     </application>
 
 </manifest>

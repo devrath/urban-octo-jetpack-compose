@@ -84,5 +84,11 @@
             android:layout_height="wrap_content"
             android:text="@string/nested_views_composable" />
 
+        <Button
+            android:id="@+id/btnDynamicViewsId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dynamic_views" />
+
     </LinearLayout>
 </ScrollView>
