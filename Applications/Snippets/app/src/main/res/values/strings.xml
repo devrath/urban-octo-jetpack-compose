@@ -22,5 +22,7 @@
     <string name="nested_views_composable">Nested views composable</string>
     <string name="title_activity_dynamic_data_list">DynamicDataList</string>
     <string name="dynamic_views">Dynamic Views</string>
+    <string name="title_activity_updating_state">updatingState</string>
+    <string name="updating_state">Updating State</string>
 
 </resources>

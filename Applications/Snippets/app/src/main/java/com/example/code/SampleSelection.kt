@@ -16,6 +16,7 @@ import com.example.code.demos.simpleSamples.nestViewsComposable.NestViewComposab
 import com.example.code.demos.simpleSamples.reusingComposable.ReusingComposableActivity
 import com.example.code.demos.simpleSamples.surfaceComposable.SurfaceComposableActivity
 import com.example.code.demos.simpleSamples.wrappingContentComposable.WrapComposableActivity
+import com.example.code.demos.statesSamples.UpdatingState
 import com.example.code.extensions.openActivity
 
 class SampleSelection : AppCompatActivity() {
@@ -44,6 +45,7 @@ class SampleSelection : AppCompatActivity() {
             btnArrangeAlignComposableId.setOnClickListener { openActivity(ArrangeAlignComposableActivity::class.java) }
             btnNestedViewComposableId.setOnClickListener { openActivity(NestViewComposableActivity::class.java) }
             btnDynamicViewsId.setOnClickListener { openActivity(DynamicDataList::class.java) }
+            btnUpdateStateId.setOnClickListener { openActivity(UpdatingState::class.java) }
         }
     }
 

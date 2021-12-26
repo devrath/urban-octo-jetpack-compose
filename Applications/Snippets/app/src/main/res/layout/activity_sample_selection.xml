@@ -90,5 +90,12 @@
             android:layout_height="wrap_content"
             android:text="@string/dynamic_views" />
 
+        <Button
+            android:id="@+id/btnUpdateStateId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/updating_state" />
+
     </LinearLayout>
+
 </ScrollView>
