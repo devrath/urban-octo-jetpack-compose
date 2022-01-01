@@ -24,5 +24,7 @@
     <string name="dynamic_views">Dynamic Views</string>
     <string name="title_activity_updating_state">updatingState</string>
     <string name="updating_state">Updating State</string>
+    <string name="state_updation_using_timer">State updation using timer</string>
+    <string name="title_activity_update_timer">UpdateTimer</string>
 
 </resources>

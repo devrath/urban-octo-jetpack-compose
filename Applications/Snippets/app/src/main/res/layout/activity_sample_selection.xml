@@ -96,6 +96,12 @@
             android:layout_height="wrap_content"
             android:text="@string/updating_state" />
 
+        <Button
+            android:id="@+id/btnStateUpdateUsingTimerId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/state_updation_using_timer" />
+
     </LinearLayout>
 
 </ScrollView>

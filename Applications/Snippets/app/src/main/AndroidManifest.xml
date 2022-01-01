@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.code">
+    package="com.example.code" >
 
     <application
         android:allowBackup="true"
@@ -8,13 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Code">
-
+        android:theme="@style/Theme.Code" >
+        <activity
+            android:name=".demos.statesSamples.updateTimer.UpdateTimer"
+            android:exported="false"
+            android:label="@string/title_activity_update_timer"
+            android:theme="@style/Theme.Code.NoActionBar" />
         <activity
             android:name=".SampleSelection"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Code.NoActionBar">
+            android:theme="@style/Theme.Code.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +38,7 @@
         <activity android:name=".demos.simpleSamples.arrangeAlignComposable.ArrangeAlignComposableActivity" />
         <activity android:name=".demos.simpleSamples.nestViewsComposable.NestViewComposableActivity" />
         <activity android:name=".demos.simpleSamples.displayDynamicData.DynamicDataList" />
-        <activity android:name=".demos.statesSamples.UpdatingState" />
+        <activity android:name=".demos.statesSamples.updateState.UpdatingState" />
     </application>
 
 </manifest>

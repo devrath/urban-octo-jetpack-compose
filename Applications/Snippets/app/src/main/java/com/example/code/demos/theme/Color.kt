@@ -1,4 +1,4 @@
-package com.example.code.demos.statesSamples.ui.theme
+package com.example.code.demos.theme
 
 import androidx.compose.ui.graphics.Color
 

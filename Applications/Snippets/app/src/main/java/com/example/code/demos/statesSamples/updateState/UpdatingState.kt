@@ -1,4 +1,4 @@
-package com.example.code.demos.statesSamples
+package com.example.code.demos.statesSamples.updateState
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,8 +6,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -24,10 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.example.code.demos.simpleSamples.buttonComposable.ButtonComposable
-import com.example.code.demos.simpleSamples.displayDynamicData.RowView
-import com.example.code.demos.statesSamples.ui.theme.CodeTheme
-import com.example.code.ui.theme.Purple700
+import com.example.code.demos.theme.CodeTheme
 import com.example.code.ui.theme.Teal200
 
 class UpdatingState : ComponentActivity() {
