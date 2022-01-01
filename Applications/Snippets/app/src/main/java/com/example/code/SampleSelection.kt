@@ -16,6 +16,7 @@ import com.example.code.demos.simpleSamples.nestViewsComposable.NestViewComposab
 import com.example.code.demos.simpleSamples.reusingComposable.ReusingComposableActivity
 import com.example.code.demos.simpleSamples.surfaceComposable.SurfaceComposableActivity
 import com.example.code.demos.simpleSamples.wrappingContentComposable.WrapComposableActivity
+import com.example.code.demos.statesSamples.rememberDemo.RememberDemo
 import com.example.code.demos.statesSamples.updateState.UpdatingState
 import com.example.code.demos.statesSamples.updateTimer.UpdateTimer
 import com.example.code.extensions.openActivity
@@ -48,6 +49,7 @@ class SampleSelection : AppCompatActivity() {
             btnDynamicViewsId.setOnClickListener { openActivity(DynamicDataList::class.java) }
             btnUpdateStateId.setOnClickListener { openActivity(UpdatingState::class.java) }
             btnStateUpdateUsingTimerId.setOnClickListener { openActivity(UpdateTimer::class.java) }
+            btnRememberDemoId.setOnClickListener { openActivity(RememberDemo::class.java) }
         }
     }
 

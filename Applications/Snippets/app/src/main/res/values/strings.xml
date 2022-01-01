@@ -26,5 +26,8 @@
     <string name="updating_state">Updating State</string>
     <string name="state_updation_using_timer">State updation using timer</string>
     <string name="title_activity_update_timer">UpdateTimer</string>
+    <string name="remember_demo">Remember Demo</string>
+    <string name="title_activity_remember_demo">RememberDemo</string>
+    <string name="str_click_to_toggle">"Click To Toggle"</string>
 
 </resources>
