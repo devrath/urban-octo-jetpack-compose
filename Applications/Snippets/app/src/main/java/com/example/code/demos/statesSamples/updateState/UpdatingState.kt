@@ -22,7 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.example.code.demos.theme.CodeTheme
+import com.example.code.ui.theme.CodeTheme
 import com.example.code.ui.theme.Teal200
 
 class UpdatingState : ComponentActivity() {
