@@ -17,6 +17,7 @@ import com.example.code.demos.simpleSamples.reusingComposable.ReusingComposableA
 import com.example.code.demos.simpleSamples.surfaceComposable.SurfaceComposableActivity
 import com.example.code.demos.simpleSamples.wrappingContentComposable.WrapComposableActivity
 import com.example.code.demos.statesSamples.rememberDemo.RememberDemo
+import com.example.code.demos.statesSamples.stateHoisting.HoistingStateDemo
 import com.example.code.demos.statesSamples.updateState.UpdatingState
 import com.example.code.demos.statesSamples.updateTimer.UpdateTimer
 import com.example.code.extensions.openActivity
@@ -50,6 +51,7 @@ class SampleSelection : AppCompatActivity() {
             btnUpdateStateId.setOnClickListener { openActivity(UpdatingState::class.java) }
             btnStateUpdateUsingTimerId.setOnClickListener { openActivity(UpdateTimer::class.java) }
             btnRememberDemoId.setOnClickListener { openActivity(RememberDemo::class.java) }
+            btnStateHoistingDemoId.setOnClickListener { openActivity(HoistingStateDemo::class.java) }
         }
     }
 

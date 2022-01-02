@@ -29,5 +29,7 @@
     <string name="remember_demo">Remember Demo</string>
     <string name="title_activity_remember_demo">RememberDemo</string>
     <string name="str_click_to_toggle">"Click To Toggle"</string>
+    <string name="title_activity_hoisting_state">HoistingState</string>
+    <string name="state_hoisting_demo">State Hoisting Demo</string>
 
 </resources>
