@@ -33,42 +33,54 @@ class HoistingStateDemo : ComponentActivity() {
 
     @Composable
     private fun CurrentScreen() {
-
         var textState by remember{ mutableStateOf("Initial Text State") }
-
         CodeTheme {
             // A surface container using the 'background' color from the theme
-            Surface(
-                color = MaterialTheme.colors.background,
-                modifier = Modifier.fillMaxSize()
+            ContainerScreen(textState) { textState = "Final Text State" }
+        }
+    }
+
+    @Composable
+    private fun ContainerScreen(textState: String, buttonClick: () -> Unit) {
+        Surface(
+            color = MaterialTheme.colors.background,
+            modifier = Modifier.fillMaxSize()
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color.Magenta),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Magenta),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
-                ) {
 
-                    Text(
-                        text = textState,
-                        modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center,
-                        style = TextStyle(
-                            fontSize = 24.sp, fontWeight = FontWeight.Bold
-                        )
-                    )
-
-                    Button(
-                        onClick = { textState = "Final Text State" },
-                        modifier = Modifier.wrapContentSize()
-                    ) {
-                        Text(text = "Click to change the text")
-                    }
-
-                }
+                DisplayText(textState)
+                ActionButton(textState,buttonClick)
             }
         }
+    }
+
+    @Composable
+    private fun ActionButton(containerTextState: String, buttonClick : () -> Unit) {
+        var buttonActionText = containerTextState
+        Button(
+            onClick = buttonClick,
+            modifier = Modifier.wrapContentSize()
+        ) {
+            Text(text = "Change text")
+        }
+    }
+
+    @Composable
+    private fun DisplayText(containerTextState: String) {
+        Text(
+            text = containerTextState,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontSize = 24.sp, fontWeight = FontWeight.Bold
+            )
+        )
     }
 
 }
