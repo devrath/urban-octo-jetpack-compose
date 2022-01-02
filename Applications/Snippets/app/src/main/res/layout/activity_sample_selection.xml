@@ -114,6 +114,12 @@
             android:layout_height="wrap_content"
             android:text="@string/state_hoisting_demo" />
 
+        <Button
+            android:id="@+id/btnTextFieldDemoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_field_demo" />
+
     </LinearLayout>
 
 </ScrollView>

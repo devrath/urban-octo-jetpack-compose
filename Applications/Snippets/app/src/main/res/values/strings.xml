@@ -31,5 +31,7 @@
     <string name="str_click_to_toggle">"Click To Toggle"</string>
     <string name="title_activity_hoisting_state">HoistingState</string>
     <string name="state_hoisting_demo">State Hoisting Demo</string>
+    <string name="title_activity_demo_text_field">DemoTextField</string>
+    <string name="text_field_demo">Text Field Demo</string>
 
 </resources>

@@ -36,7 +36,8 @@
         <activity android:name=".demos.statesSamples.updateState.UpdatingState" />
         <activity android:name=".demos.statesSamples.rememberDemo.RememberDemo" />
         <activity android:name=".demos.statesSamples.updateTimer.UpdateTimer" />
-        <activity android:name=".demos.statesSamples.stateHoisting.HoistingStateDemo"/>
+        <activity android:name=".demos.statesSamples.stateHoisting.HoistingStateDemo" />
+        <activity android:name=".demos.statesSamples.textFieldDemo.DemoTextField" />
     </application>
 
 </manifest>
