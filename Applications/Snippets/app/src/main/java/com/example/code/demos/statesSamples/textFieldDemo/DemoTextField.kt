@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -30,48 +30,126 @@ class DemoTextField : ComponentActivity() {
 
     @Composable
     private fun CurrentScreen() {
+
+        val dynamicTextState = remember{ mutableStateOf("") }
+        val staticTextState = remember{ mutableStateOf("") }
+
         CodeTheme {
-            Surface(
-                color = MaterialTheme.colors.background,
-                modifier = Modifier.fillMaxSize()
+            ScreenUi(dynamicTextState,staticTextState)
+        }
+
+    }
+
+    @Composable
+    private fun ScreenUi(
+        dynamicTextState: MutableState<String>,
+        staticTextState: MutableState<String>
+    ) {
+        Surface(
+            color = MaterialTheme.colors.background,
+            modifier = Modifier.fillMaxSize()
+        ) {
+
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
 
-                Column(
-                    modifier = Modifier.fillMaxSize(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
-                ) {
-
-                    Text(
-                        text = "Current State",
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth().padding(bottom = 20.dp),
-                        style = TextStyle(
-                            color = Color.Magenta,
-                            fontSize = 28.sp,
-                            fontWeight = FontWeight.SemiBold
-                        )
+                DisplayUiForOneClickUpdating(staticTextState)
+                DisplayUiForContinuousUpdating(dynamicTextState)
+                InputUi(dynamicTextState.value) { dynamicTextState.value = it }
+                ActionUi {
+                    updateText(
+                        newValue = staticTextState,valueToUpdate = dynamicTextState
                     )
-
-                    TextField(value = "Hello", onValueChange = {
-
-                    } , modifier = Modifier.padding(bottom = 20.dp))
-
-                    Button(
-                        onClick = {
-
-                        },
-                        modifier = Modifier.wrapContentSize()
-                    ) {
-                        Text(
-                            text = "Change Text",
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.wrapContentSize(),
-                        )
-                    }
-
                 }
+
             }
         }
     }
+
+    /**
+     * Important Point To Observe:
+     * Here we can set the new value for the latest value
+     */
+    private fun updateText(newValue: MutableState<String>, valueToUpdate: MutableState<String>) {
+        newValue.value = valueToUpdate.value
+    }
+
+    /**
+     * Important Point To Observe:
+     * inputUiValue :-> This acts as a input to the current composable
+     * inputUiUpdate :-> This acts as a output to the parent composable
+     */
+    @Composable
+    private fun InputUi(
+        inputUiValue: String,
+        inputUiUpdate : (newValue:String) -> Unit
+    ) {
+        TextField(
+            modifier = Modifier.padding(bottom = 20.dp),
+            value = inputUiValue, onValueChange = inputUiUpdate
+        )
+    }
+
+    /**
+     * Important Point To Observe:
+     * Here the UI is updating continuously when we type on edit text
+     * More Information: We can just pass the mutable state and just update the content
+     */
+    @Composable
+    private fun DisplayUiForContinuousUpdating(newNameStateContent: MutableState<String>) {
+        Text(
+            text = newNameStateContent.value,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 20.dp),
+            style = TextStyle(
+                color = Color.Magenta,
+                fontSize = 28.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+        )
+    }
+
+    @Composable
+    private fun DisplayUiForOneClickUpdating(newNameClickStateContent: MutableState<String>) {
+
+        val textField by newNameClickStateContent
+
+        Text(
+            text = textField,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 20.dp),
+            style = TextStyle(
+                color = Color.Green,
+                fontSize = 28.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+        )
+    }
+
+
+    /**
+     * Important Point To Observe:
+     * This returns the action back via the lambda function call to parent
+     */
+    @Composable
+    private fun ActionUi(buttonClick : () -> Unit) {
+        Button(
+            onClick = buttonClick,
+            modifier = Modifier.wrapContentSize()
+        ) {
+            Text(
+                text = "Change Text",
+                textAlign = TextAlign.Center,
+                modifier = Modifier.wrapContentSize(),
+            )
+        }
+    }
+
 }
