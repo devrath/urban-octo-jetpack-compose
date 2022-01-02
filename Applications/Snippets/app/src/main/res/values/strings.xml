@@ -33,5 +33,7 @@
     <string name="state_hoisting_demo">State Hoisting Demo</string>
     <string name="title_activity_demo_text_field">DemoTextField</string>
     <string name="text_field_demo">Text Field Demo</string>
+    <string name="title_activity_view_model_demo">ViewModelDemo</string>
+    <string name="view_model_demo">View Model Demo</string>
 
 </resources>

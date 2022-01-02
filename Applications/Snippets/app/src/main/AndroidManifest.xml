@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Code">
+
         <activity
             android:name=".SampleSelection"
             android:exported="true"
@@ -38,6 +39,7 @@
         <activity android:name=".demos.statesSamples.updateTimer.UpdateTimer" />
         <activity android:name=".demos.statesSamples.stateHoisting.HoistingStateDemo" />
         <activity android:name=".demos.statesSamples.textFieldDemo.DemoTextField" />
+        <activity android:name=".demos.statesSamples.viewModelDemo.ViewModelDemo" />
     </application>
 
 </manifest>

@@ -21,6 +21,7 @@ import com.example.code.demos.statesSamples.stateHoisting.HoistingStateDemo
 import com.example.code.demos.statesSamples.textFieldDemo.DemoTextField
 import com.example.code.demos.statesSamples.updateState.UpdatingState
 import com.example.code.demos.statesSamples.updateTimer.UpdateTimer
+import com.example.code.demos.statesSamples.viewModelDemo.ViewModelDemo
 import com.example.code.extensions.openActivity
 
 class SampleSelection : AppCompatActivity() {
@@ -54,6 +55,7 @@ class SampleSelection : AppCompatActivity() {
             btnRememberDemoId.setOnClickListener { openActivity(RememberDemo::class.java) }
             btnStateHoistingDemoId.setOnClickListener { openActivity(HoistingStateDemo::class.java) }
             btnTextFieldDemoId.setOnClickListener { openActivity(DemoTextField::class.java) }
+            btnViewModelDemoId.setOnClickListener { openActivity(ViewModelDemo::class.java) }
         }
     }
 

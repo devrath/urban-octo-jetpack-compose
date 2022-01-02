@@ -120,6 +120,12 @@
             android:layout_height="wrap_content"
             android:text="@string/text_field_demo" />
 
+        <Button
+            android:id="@+id/btnViewModelDemoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_model_demo" />
+
     </LinearLayout>
 
 </ScrollView>
