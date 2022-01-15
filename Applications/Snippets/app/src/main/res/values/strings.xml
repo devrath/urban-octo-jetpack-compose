@@ -35,5 +35,8 @@
     <string name="text_field_demo">Text Field Demo</string>
     <string name="title_activity_view_model_demo">ViewModelDemo</string>
     <string name="view_model_demo">View Model Demo</string>
+    <string name="widget_demos">Widget Demos</string>
+    <string name="simple_demos">Simple Demos</string>
+    <string name="row_and_column_demo">Row And Column Demo</string>
 
 </resources>
