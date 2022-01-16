@@ -53,17 +53,24 @@
         <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity"/>
         <!-- Modifier Demo Selection -->
 
+        <!-- Styling Demo Selection -->
+        <activity android:name=".demos.stylingSamples.StylingSampleDemo"/>
+        <!-- Modifier Demo Selection -->
+
 
         <!-- Selection Screens -->
         <activity
-            android:name=".WidgetsSelection"
+            android:name=".selection.WidgetsSelection"
             android:label="@string/widget_demos" />
         <activity
-            android:name=".SampleSelection"
+            android:name=".selection.SampleSelection"
             android:label="@string/sel_simple_sample" />
         <activity
-            android:name=".ModifierSelection"
+            android:name=".selection.ModifierSelection"
             android:label="@string/title_activity_modifier_selection_demo_screen"/>
+        <activity
+            android:name=".selection.StylingSelection"
+            android:label="@string/styling_demos"/>
         <!-- Selection Screens -->
 
     </application>

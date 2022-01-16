@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.code.databinding.ActivitySelectionScreenBinding
 import com.example.code.demos.simpleSamples.helloWorld.HelloWorldActivity
 import com.example.code.extensions.openActivity
+import com.example.code.selection.ModifierSelection
+import com.example.code.selection.SampleSelection
+import com.example.code.selection.StylingSelection
 
 class SelectionScreen : AppCompatActivity() {
 
@@ -22,6 +25,7 @@ class SelectionScreen : AppCompatActivity() {
             btnWidgetDemosId.setOnClickListener { openActivity(HelloWorldActivity::class.java) }
             btnSimpleDemosId.setOnClickListener { openActivity(SampleSelection::class.java) }
             btnModifierDemosId.setOnClickListener { openActivity(ModifierSelection::class.java) }
+            btnStylingDemosId.setOnClickListener { openActivity(StylingSelection::class.java) }
         }
     }
 

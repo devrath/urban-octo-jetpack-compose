@@ -30,6 +30,12 @@
             android:layout_height="wrap_content"
             android:text="@string/modifier_demos" />
 
+        <Button
+            android:id="@+id/btnStylingDemosId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/styling_demos" />
+
     </LinearLayout>
 
 </ScrollView>
