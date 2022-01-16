@@ -3,7 +3,7 @@ package com.example.code
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.code.databinding.ActivityWidgetsSelectionBinding
-import com.example.code.demos.simpleSamples.helloWorld.HelloWorldActivity
+import com.example.code.demos.widgetSamples.RowsAndColumnsActivity
 import com.example.code.extensions.openActivity
 
 class WidgetsSelection : AppCompatActivity() {
@@ -19,7 +19,7 @@ class WidgetsSelection : AppCompatActivity() {
 
     private fun setOnClickListener() {
         binding.apply {
-            btnRowColumnDemoId.setOnClickListener { openActivity(HelloWorldActivity::class.java) }
+            btnRowColumnDemoId.setOnClickListener { openActivity(RowsAndColumnsActivity::class.java) }
         }
     }
 

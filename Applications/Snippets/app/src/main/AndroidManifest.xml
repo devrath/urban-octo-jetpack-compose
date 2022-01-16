@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Code">
-
         <activity
-            android:name=".SelectionScreen"
+            android:name=".demos.widgetSamples.RowsAndColumnsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_rows_and_columns"
+            android:theme="@style/Theme.Code.NoActionBar" />
+        <activity
+            android:name=".WidgetsSelection"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Code.NoActionBar">
@@ -21,10 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SampleSelection"
-            android:label="@string/sel_simple_sample"/>
-        <activity android:name=".WidgetsSelection"
-            android:label="@string/widget_demos"/>
+        <activity
+            android:name=".SelectionScreen"
+            android:label="@string/widget_demos" />
+        <activity
+            android:name=".SampleSelection"
+            android:label="@string/sel_simple_sample" />
         <activity android:name=".demos.simpleSamples.helloWorld.HelloWorldActivity" />
         <activity android:name=".demos.simpleSamples.decouplingComposable.DecoupledComposable" />
         <activity android:name=".demos.simpleSamples.buttonComposable.ButtonComposable" />

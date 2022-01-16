@@ -38,5 +38,6 @@
     <string name="widget_demos">Widget Demos</string>
     <string name="simple_demos">Simple Demos</string>
     <string name="row_and_column_demo">Row And Column Demo</string>
+    <string name="title_activity_rows_and_columns">RowsAndColumnsActivity</string>
 
 </resources>
