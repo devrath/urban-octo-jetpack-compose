@@ -44,6 +44,7 @@
         <activity android:name=".demos.widgetSamples.RowsAndColumnsActivity" />
         <activity android:name=".demos.widgetSamples.SpacerWidgetDemoActivity" />
         <activity android:name=".demos.widgetSamples.BoxComposableDemo" />
+        <activity android:name=".demos.widgetSamples.SurfaceComposableDemo" />
         <!-- Widget Demo Selection -->
 
         <!-- Modifier Demo Selection -->

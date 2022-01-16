@@ -47,5 +47,6 @@
     <string name="styling_demos">Styling Demos</string>
     <string name="title_activity_box_composable_demo">BoxComposableDemo</string>
     <string name="box_composable_demo">Box Composable Demo</string>
+    <string name="surface_composable_demo">Surface Composable Demo</string>
 
 </resources>

@@ -6,6 +6,7 @@ import com.example.code.databinding.ActivityWidgetsSelectionBinding
 import com.example.code.demos.widgetSamples.BoxComposableDemo
 import com.example.code.demos.widgetSamples.RowsAndColumnsActivity
 import com.example.code.demos.widgetSamples.SpacerWidgetDemoActivity
+import com.example.code.demos.widgetSamples.SurfaceComposableDemo
 import com.example.code.extensions.openActivity
 
 class WidgetsSelection : AppCompatActivity() {
@@ -24,6 +25,7 @@ class WidgetsSelection : AppCompatActivity() {
             btnRowColumnDemoId.setOnClickListener { openActivity(RowsAndColumnsActivity::class.java) }
             btnSpacerDemoId.setOnClickListener { openActivity(SpacerWidgetDemoActivity::class.java) }
             btnBoxComposableDemoId.setOnClickListener { openActivity(BoxComposableDemo::class.java) }
+            btnSurfaceComposableDemoId.setOnClickListener { openActivity(SurfaceComposableDemo::class.java) }
         }
     }
 
