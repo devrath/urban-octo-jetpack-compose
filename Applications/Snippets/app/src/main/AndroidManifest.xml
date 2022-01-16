@@ -21,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Simple Selection -->
         <activity android:name=".demos.simpleSamples.helloWorld.HelloWorldActivity" />
         <activity android:name=".demos.simpleSamples.decouplingComposable.DecoupledComposable" />
         <activity android:name=".demos.simpleSamples.buttonComposable.ButtonComposable" />
@@ -40,10 +42,18 @@
         <activity android:name=".demos.statesSamples.stateHoisting.HoistingStateDemo" />
         <activity android:name=".demos.statesSamples.textFieldDemo.DemoTextField" />
         <activity android:name=".demos.statesSamples.viewModelDemo.ViewModelDemo" />
+        <!-- Simple Selection -->
+
+        <!-- Widget Demo Selection -->
         <activity android:name=".demos.widgetSamples.RowsAndColumnsActivity" />
+        <!-- Widget Demo Selection -->
 
+        <!-- Modifier Demo Selection -->
         <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity"/>
+        <!-- Modifier Demo Selection -->
 
+        
+        <!-- Selection Screens -->
         <activity
             android:name=".WidgetsSelection"
             android:label="@string/widget_demos" />
@@ -53,6 +63,8 @@
         <activity
             android:name=".ModifierSelection"
             android:label="@string/title_activity_modifier_selection_demo_screen"/>
+        <!-- Selection Screens -->
+
     </application>
 
 </manifest>
