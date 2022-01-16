@@ -39,5 +39,9 @@
     <string name="simple_demos">Simple Demos</string>
     <string name="row_and_column_demo">Row And Column Demo</string>
     <string name="title_activity_rows_and_columns">RowsAndColumnsActivity</string>
+    <string name="title_activity_modifier_sample_one">ModifierSampleOneActivity</string>
+    <string name="modifier_demos">Modifier Demos</string>
+    <string name="title_activity_modifier_selection_demo_screen">Modifier Demo Selection</string>
+    <string name="modifier_demo_1">Modifier Demo 1</string>
 
 </resources>

@@ -21,6 +21,7 @@ class SelectionScreen : AppCompatActivity() {
         binding.apply {
             btnWidgetDemosId.setOnClickListener { openActivity(HelloWorldActivity::class.java) }
             btnSimpleDemosId.setOnClickListener { openActivity(SampleSelection::class.java) }
+            btnModifierDemosId.setOnClickListener { openActivity(ModifierSelection::class.java) }
         }
     }
 

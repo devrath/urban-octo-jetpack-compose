@@ -13,22 +13,10 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnWidgetDemosId"
+            android:id="@+id/btnModifierDemoOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/widget_demos" />
-
-        <Button
-            android:id="@+id/btnSimpleDemosId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/simple_demos" />
-
-        <Button
-            android:id="@+id/btnModifierDemosId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/modifier_demos" />
+            android:text="@string/modifier_demo_1" />
 
     </LinearLayout>
 
