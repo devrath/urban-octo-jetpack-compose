@@ -24,6 +24,12 @@
             android:layout_height="wrap_content"
             android:text="@string/spacer_demo" />
 
+        <Button
+            android:id="@+id/btnBoxComposableDemoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/box_composable_demo" />
+
 
     </LinearLayout>
 

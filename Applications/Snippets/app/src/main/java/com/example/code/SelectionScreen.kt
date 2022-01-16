@@ -8,6 +8,7 @@ import com.example.code.extensions.openActivity
 import com.example.code.selection.ModifierSelection
 import com.example.code.selection.SampleSelection
 import com.example.code.selection.StylingSelection
+import com.example.code.selection.WidgetsSelection
 
 class SelectionScreen : AppCompatActivity() {
 
@@ -22,10 +23,10 @@ class SelectionScreen : AppCompatActivity() {
 
     private fun setOnClickListener() {
         binding.apply {
-            btnWidgetDemosId.setOnClickListener { openActivity(HelloWorldActivity::class.java) }
             btnSimpleDemosId.setOnClickListener { openActivity(SampleSelection::class.java) }
             btnModifierDemosId.setOnClickListener { openActivity(ModifierSelection::class.java) }
             btnStylingDemosId.setOnClickListener { openActivity(StylingSelection::class.java) }
+            btnWidgetDemosId.setOnClickListener { openActivity(WidgetsSelection::class.java) }
         }
     }
 

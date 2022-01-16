@@ -45,5 +45,7 @@
     <string name="modifier_demo_1">Modifier Demo 1</string>
     <string name="spacer_demo">Spacer Demo</string>
     <string name="styling_demos">Styling Demos</string>
+    <string name="title_activity_box_composable_demo">BoxComposableDemo</string>
+    <string name="box_composable_demo">Box Composable Demo</string>
 
 </resources>

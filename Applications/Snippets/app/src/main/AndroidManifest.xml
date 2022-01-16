@@ -20,9 +20,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Simple Selection -->
+        </activity> <!-- Simple Selection -->
         <activity android:name=".demos.simpleSamples.helloWorld.HelloWorldActivity" />
         <activity android:name=".demos.simpleSamples.decouplingComposable.DecoupledComposable" />
         <activity android:name=".demos.simpleSamples.buttonComposable.ButtonComposable" />
@@ -41,23 +39,19 @@
         <activity android:name=".demos.statesSamples.updateTimer.UpdateTimer" />
         <activity android:name=".demos.statesSamples.stateHoisting.HoistingStateDemo" />
         <activity android:name=".demos.statesSamples.textFieldDemo.DemoTextField" />
-        <activity android:name=".demos.statesSamples.viewModelDemo.ViewModelDemo" />
-        <!-- Simple Selection -->
-
+        <activity android:name=".demos.statesSamples.viewModelDemo.ViewModelDemo" /> <!-- Simple Selection -->
         <!-- Widget Demo Selection -->
         <activity android:name=".demos.widgetSamples.RowsAndColumnsActivity" />
         <activity android:name=".demos.widgetSamples.SpacerWidgetDemoActivity" />
+        <activity android:name=".demos.widgetSamples.BoxComposableDemo" />
         <!-- Widget Demo Selection -->
 
         <!-- Modifier Demo Selection -->
-        <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity"/>
+        <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity" />
         <!-- Modifier Demo Selection -->
 
         <!-- Styling Demo Selection -->
-        <activity android:name=".demos.stylingSamples.StylingSampleDemo"/>
-        <!-- Modifier Demo Selection -->
-
-
+        <activity android:name=".demos.stylingSamples.StylingSampleDemo" /> <!-- Modifier Demo Selection -->
         <!-- Selection Screens -->
         <activity
             android:name=".selection.WidgetsSelection"
@@ -67,12 +61,10 @@
             android:label="@string/sel_simple_sample" />
         <activity
             android:name=".selection.ModifierSelection"
-            android:label="@string/title_activity_modifier_selection_demo_screen"/>
+            android:label="@string/title_activity_modifier_selection_demo_screen" />
         <activity
             android:name=".selection.StylingSelection"
-            android:label="@string/styling_demos"/>
-        <!-- Selection Screens -->
-
+            android:label="@string/styling_demos" />
     </application>
 
 </manifest>
