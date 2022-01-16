@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.code.databinding.ActivityWidgetsSelectionBinding
 import com.example.code.demos.widgetSamples.RowsAndColumnsActivity
+import com.example.code.demos.widgetSamples.SpacerWidgetDemoActivity
 import com.example.code.extensions.openActivity
 
 class WidgetsSelection : AppCompatActivity() {
@@ -20,6 +21,7 @@ class WidgetsSelection : AppCompatActivity() {
     private fun setOnClickListener() {
         binding.apply {
             btnRowColumnDemoId.setOnClickListener { openActivity(RowsAndColumnsActivity::class.java) }
+            btnSpacerDemoId.setOnClickListener { openActivity(SpacerWidgetDemoActivity::class.java) }
         }
     }
 

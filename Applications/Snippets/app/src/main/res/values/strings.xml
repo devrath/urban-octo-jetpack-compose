@@ -43,5 +43,6 @@
     <string name="modifier_demos">Modifier Demos</string>
     <string name="title_activity_modifier_selection_demo_screen">Modifier Demo Selection</string>
     <string name="modifier_demo_1">Modifier Demo 1</string>
+    <string name="spacer_demo">Spacer Demo</string>
 
 </resources>

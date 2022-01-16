@@ -1,11 +1,9 @@
-package com.example.code.demos.modifierSamples
+package com.example.code.demos.widgetSamples
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -13,13 +11,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.code.ui.theme.CodeTheme
 
-class ModifierSampleOneActivity : ComponentActivity() {
+class SpacerWidgetDemoActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { CurrentScreen() }
@@ -34,27 +31,14 @@ fun DefaultPreview() { CurrentScreen() }
 private fun CurrentScreen() {
     CodeTheme {
         Surface(color = MaterialTheme.colors.background) {
-            Column(
-                Modifier.background(Color.Gray)
-                    .width(300.dp)
-                    .fillMaxHeight(0.5F)
-                    .border(5.dp, Color.Blue, shape = RectangleShape)
-                    .padding(50.dp)
-                    .border(5.dp, Color.Red, shape = RectangleShape)
-                    .padding(50.dp)
-                    .border(5.dp, Color.Cyan, shape = RectangleShape)
-                    .clickable {}
-
+            Column(Modifier.background(Color.Gray).fillMaxSize()
             ) {
                 Text(
-                    modifier = Modifier.background(Color.Magenta),
-                    text = "Text1",
-                    style = TextStyle(color = Color.White)
+                    modifier = Modifier.background(Color.Magenta), text = "Text1", style = TextStyle(color = Color.White)
                 )
+                Spacer(modifier = Modifier.height(10.dp))
                 Text(
-                    modifier = Modifier.background(Color.Blue),
-                    text = "Text2",
-                    style = TextStyle(color = Color.White)
+                    modifier = Modifier.background(Color.Blue), text = "Text2", style = TextStyle(color = Color.White)
                 )
             }
         }

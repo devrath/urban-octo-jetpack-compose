@@ -18,6 +18,11 @@
             android:layout_height="wrap_content"
             android:text="@string/row_and_column_demo" />
 
+        <Button
+            android:id="@+id/btnSpacerDemoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spacer_demo" />
 
 
     </LinearLayout>

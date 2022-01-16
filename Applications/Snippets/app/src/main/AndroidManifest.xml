@@ -46,13 +46,14 @@
 
         <!-- Widget Demo Selection -->
         <activity android:name=".demos.widgetSamples.RowsAndColumnsActivity" />
+        <activity android:name=".demos.widgetSamples.SpacerWidgetDemoActivity" />
         <!-- Widget Demo Selection -->
 
         <!-- Modifier Demo Selection -->
         <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity"/>
         <!-- Modifier Demo Selection -->
 
-        
+
         <!-- Selection Screens -->
         <activity
             android:name=".WidgetsSelection"
