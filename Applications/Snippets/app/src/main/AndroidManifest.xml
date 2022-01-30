@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Code">
-
         <activity
             android:name=".SelectionScreen"
             android:exported="true"
@@ -44,15 +43,12 @@
         <activity android:name=".demos.widgetSamples.RowsAndColumnsActivity" />
         <activity android:name=".demos.widgetSamples.SpacerWidgetDemoActivity" />
         <activity android:name=".demos.widgetSamples.BoxComposableDemo" />
-        <activity android:name=".demos.widgetSamples.SurfaceComposableDemo" />
-        <!-- Widget Demo Selection -->
-
+        <activity android:name=".demos.widgetSamples.SurfaceComposableDemo" /> <!-- Widget Demo Selection -->
         <!-- Modifier Demo Selection -->
-        <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity" />
-        <!-- Modifier Demo Selection -->
-
+        <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity" /> <!-- Modifier Demo Selection -->
         <!-- Styling Demo Selection -->
         <activity android:name=".demos.stylingSamples.StylingSampleDemo" /> <!-- Modifier Demo Selection -->
+        <activity android:name=".demos.stylingSamples.ProfileListDemo" />
         <!-- Selection Screens -->
         <activity
             android:name=".selection.WidgetsSelection"
