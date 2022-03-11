@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Code">
         <activity
+            android:name=".demos.stylingSamples.MainActivity1"
+            android:exported="false" />
+        <activity
             android:name=".SelectionScreen"
             android:exported="true"
             android:label="@string/app_name"
@@ -48,8 +51,7 @@
         <activity android:name=".demos.modifierSamples.ModifierSampleOneActivity" /> <!-- Modifier Demo Selection -->
         <!-- Styling Demo Selection -->
         <activity android:name=".demos.stylingSamples.StylingSampleDemo" /> <!-- Modifier Demo Selection -->
-        <activity android:name=".demos.stylingSamples.ProfileListDemo" />
-        <!-- Selection Screens -->
+        <activity android:name=".demos.stylingSamples.ProfileListDemo" /> <!-- Selection Screens -->
         <activity
             android:name=".selection.WidgetsSelection"
             android:label="@string/widget_demos" />

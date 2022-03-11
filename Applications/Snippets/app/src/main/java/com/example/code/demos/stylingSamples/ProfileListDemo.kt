@@ -43,7 +43,7 @@ class ProfileListDemo : ComponentActivity() {
     }
 
     @Composable
-    private fun ProfileCard() {
+    public fun ProfileCard() {
         Card(
             modifier = Modifier.fillMaxWidth(),
             elevation = 10.dp
@@ -80,3 +80,9 @@ class ProfileListDemo : ComponentActivity() {
     @Composable
     fun DefaultPreview() { CurrentScreen() }
 }
+
+
+/*@Composable
+public fun TestingCall() {
+
+}*/
