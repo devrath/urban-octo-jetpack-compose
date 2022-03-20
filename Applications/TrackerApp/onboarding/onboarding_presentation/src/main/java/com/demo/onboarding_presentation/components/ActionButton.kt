@@ -13,12 +13,12 @@ import com.demo.core_ui.LocalSpacing
 
 @Composable
 fun ActionButton(
-    text:String,
+    text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    isEnabled : Boolean = false,
+    isEnabled: Boolean = true,
     textStyle: TextStyle = MaterialTheme.typography.button
-){
+) {
     Button(
         onClick = onClick,
         modifier = modifier,
@@ -28,7 +28,7 @@ fun ActionButton(
         Text(
             text = text,
             style = textStyle,
-            color = MaterialTheme.colors.primary,
+            color = MaterialTheme.colors.onPrimary,
             modifier = Modifier.padding(LocalSpacing.current.spaceSmall)
         )
     }
