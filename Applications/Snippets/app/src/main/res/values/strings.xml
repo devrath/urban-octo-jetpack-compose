@@ -51,5 +51,10 @@
     <string name="list_of_profiles">List of profiles</string>
     <string name="title_activity_profile_list_demo">ProfileListDemo</string>
     <string name="profile_list_screen">Profile List Screen</string>
+    <string name="ui_sample_demos">UI Sample Demos</string>
+    <string name="sample_practice_demos">Sample Practice Demos</string>
+    <string name="title_activity_profile_list">Profile List</string>
+    <string name="profile_list_sample">Profile List Sample</string>
+    <string name="practice_sample_selection">Practice Sample Selection</string>
 
 </resources>

@@ -3,6 +3,8 @@ package com.example.code
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.code.databinding.ActivitySelectionScreenBinding
+import com.example.code.demos.practiceSamples.PracticeSampleSelection
+import com.example.code.demos.practiceSamples.profileList.ProfileListActivity
 import com.example.code.demos.simpleSamples.helloWorld.HelloWorldActivity
 import com.example.code.extensions.openActivity
 import com.example.code.selection.ModifierSelection
@@ -25,8 +27,9 @@ class SelectionScreen : AppCompatActivity() {
         binding.apply {
             btnSimpleDemosId.setOnClickListener { openActivity(SampleSelection::class.java) }
             btnModifierDemosId.setOnClickListener { openActivity(ModifierSelection::class.java) }
-            btnStylingDemosId.setOnClickListener { openActivity(StylingSelection::class.java) }
+            //btnStylingDemosId.setOnClickListener { openActivity(StylingSelection::class.java) }
             btnWidgetDemosId.setOnClickListener { openActivity(WidgetsSelection::class.java) }
+            btnSamplePracticeId.setOnClickListener { openActivity(PracticeSampleSelection::class.java) }
         }
     }
 
