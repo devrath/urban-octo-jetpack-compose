@@ -50,5 +50,6 @@
     <string name="surface_composable_demo">Surface Composable Demo</string>
     <string name="list_of_profiles">List of profiles</string>
     <string name="title_activity_profile_list_demo">ProfileListDemo</string>
+    <string name="profile_list_screen">Profile List Screen</string>
 
 </resources>
