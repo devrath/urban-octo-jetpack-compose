@@ -27,7 +27,7 @@ import androidx.core.content.ContextCompat
 import com.example.code.ui.theme.CodeTheme
 
 class ProfileListDemo : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+   /* override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { CurrentScreen() }
     }
@@ -78,7 +78,7 @@ class ProfileListDemo : ComponentActivity() {
 
     @Preview(showBackground = true)
     @Composable
-    fun DefaultPreview() { CurrentScreen() }
+    fun DefaultPreview() { CurrentScreen() }*/
 }
 
 
