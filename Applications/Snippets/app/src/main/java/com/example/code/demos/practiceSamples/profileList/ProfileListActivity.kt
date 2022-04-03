@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -19,6 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.dp
 import com.example.code.R
 import com.example.code.ui.theme.CodeTheme
@@ -34,6 +37,7 @@ class ProfileListActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen() {
+
     Scaffold(topBar = {AppBar()}) {
         Surface(
             modifier = Modifier.fillMaxSize(),
@@ -42,9 +46,12 @@ fun MainScreen() {
             Column(
                 modifier = Modifier.fillMaxSize(),
             ) {
-                ProfileCard(name = "Brijesh")
-                ProfileCard(name = "Aakash")
-                ProfileCard(name = "CS")
+                val listOfUsers : ArrayList<Userprofile> = userProfileList
+                LazyColumn{
+                    items(listOfUsers){ user ->
+                        ProfileCard(name = user.name)
+                    }
+                }
             }
         }
     }
