@@ -1,7 +1,6 @@
 package com.example.code.demos.practiceSamples.profileList
 
 import android.os.Bundle
-import android.text.Layout
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
@@ -9,15 +8,12 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
-import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -43,7 +39,13 @@ fun MainScreen() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
-            ProfileCard()
+            Column(
+                modifier = Modifier.fillMaxSize(),
+            ) {
+                ProfileCard(name = "Brijesh")
+                ProfileCard(name = "Aakash")
+                ProfileCard(name = "CS")
+            }
         }
     }
 }
@@ -59,7 +61,7 @@ fun AppBar() {
 }
 
 @Composable
-fun ProfileCard() {
+fun ProfileCard(name: String) {
     Card(
         modifier = Modifier
             .padding(16.dp)
@@ -73,7 +75,7 @@ fun ProfileCard() {
             horizontalArrangement = Arrangement.Start
         ) {
             ProfilePicture()
-            ProfileContent()
+            ProfileContent(name)
         }
     }
 }
@@ -97,10 +99,10 @@ fun ProfilePicture() {
 }
 
 @Composable
-fun ProfileContent() {
+fun ProfileContent(name: String) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
-            text = "Rahul",
+            text = name,
             style = MaterialTheme.typography.h5
         )
         CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
