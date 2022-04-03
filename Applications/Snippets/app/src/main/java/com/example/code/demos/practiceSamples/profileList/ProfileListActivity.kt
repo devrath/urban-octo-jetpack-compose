@@ -9,6 +9,9 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
+import androidx.compose.material.SnackbarDefaults.backgroundColor
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
@@ -18,6 +21,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.ui.unit.dp
 import com.example.code.R
 import com.example.code.ui.theme.CodeTheme
@@ -33,12 +38,24 @@ class ProfileListActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen() {
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colors.background
-    ) {
-        ProfileCard()
+    Scaffold(topBar = {AppBar()}) {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colors.background
+        ) {
+            ProfileCard()
+        }
     }
+}
+
+@Composable
+fun AppBar() {
+    TopAppBar(
+        navigationIcon = {
+            Icon(Icons.Filled.Menu, "Menu")
+        },
+        title = { Text(text = "Home") }
+    )
 }
 
 @Composable
