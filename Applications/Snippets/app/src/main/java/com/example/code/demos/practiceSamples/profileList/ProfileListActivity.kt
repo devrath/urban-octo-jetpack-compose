@@ -24,9 +24,11 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.code.R
 import com.example.code.ui.theme.CodeTheme
 
@@ -58,9 +60,14 @@ fun UserApplication(){
             // It takes a composable
             UsersListScreen(navController)
         }
-        composable("users_details") {
+        composable(
+            route = "users_details/{userId}",
+            arguments = listOf(navArgument("userId"){
+                type = NavType.IntType
+            })
+        ) { navBackStackEntry ->
             // It takes a composable
-            UserProfileDetailsScreen()
+            UserProfileDetailsScreen(navBackStackEntry.arguments!!.getInt("userId"))
         }
     }
 }
@@ -83,7 +90,7 @@ fun UsersListScreen(navController:NavController?) {
                     items(listOfUsers){ user ->
                         ProfileCard(name = user.name,isDetailsScreen){
                             // This is called trailing lambda - Since last parameter is a lambda
-                            navController?.navigate("users_details")
+                            navController?.navigate("users_details/${user.id}")
                         }
                     }
                 }
@@ -93,8 +100,9 @@ fun UsersListScreen(navController:NavController?) {
 }
 
 @Composable
-fun UserProfileDetailsScreen(userprofile: Userprofile = userProfileList[0]) {
+fun UserProfileDetailsScreen(id: Int) {
 
+    val userprofile = userProfileList.first { userprofile -> userprofile.id == id }
     val isDetailsScreen = true
 
     Scaffold(topBar = {AppBar()}) {
@@ -208,5 +216,5 @@ fun UsersListScreenDefaultPreview() {
 @Preview(showBackground = true)
 @Composable
 fun UserProfileDetailsScreenDefaultPreview() {
-    CodeTheme { UserProfileDetailsScreen() }
+    CodeTheme { UserProfileDetailsScreen(id=0) }
 }
