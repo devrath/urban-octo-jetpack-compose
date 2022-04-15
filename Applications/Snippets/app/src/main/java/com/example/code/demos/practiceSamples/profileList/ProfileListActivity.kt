@@ -21,7 +21,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.dp
 import com.example.code.R
 import com.example.code.ui.theme.CodeTheme
@@ -30,13 +29,15 @@ class ProfileListActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CodeTheme { MainScreen() }
+            CodeTheme { UsersListScreen() }
         }
     }
 }
 
 @Composable
-fun MainScreen() {
+fun UsersListScreen() {
+
+    val isDetailsScreen = false
 
     Scaffold(topBar = {AppBar()}) {
         Surface(
@@ -49,9 +50,28 @@ fun MainScreen() {
                 val listOfUsers : ArrayList<Userprofile> = userProfileList
                 LazyColumn{
                     items(listOfUsers){ user ->
-                        ProfileCard(name = user.name)
+                        ProfileCard(name = user.name,isDetailsScreen)
                     }
                 }
+            }
+        }
+    }
+}
+
+@Composable
+fun UserProfileDetailsScreen(userprofile: Userprofile = userProfileList[0]) {
+
+    val isDetailsScreen = true
+
+    Scaffold(topBar = {AppBar()}) {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colors.background
+        ) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+            ) {
+                ProfileDetailsCard(name = userprofile.name,isDetailsScreen)
             }
         }
     }
@@ -68,7 +88,7 @@ fun AppBar() {
 }
 
 @Composable
-fun ProfileCard(name: String) {
+fun ProfileCard(name: String, isDetailsScreen: Boolean=false) {
     Card(
         modifier = Modifier
             .padding(16.dp)
@@ -81,14 +101,25 @@ fun ProfileCard(name: String) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Start
         ) {
-            ProfilePicture()
+            ProfilePicture(isDetailsScreen)
             ProfileContent(name)
         }
     }
 }
 
 @Composable
-fun ProfilePicture() {
+fun ProfileDetailsCard(name: String,isDetailsScreen:Boolean) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        ProfilePicture(isDetailsScreen)
+        ProfileContent(name)
+    }
+}
+
+@Composable
+fun ProfilePicture(isDetailScreen : Boolean = false) {
     Card(
         shape = CircleShape,
         border = BorderStroke(width = 2.dp, color = Color.Green),
@@ -98,7 +129,11 @@ fun ProfilePicture() {
         Image(
             painter = painterResource(id = R.drawable.ic_profile_pic),
             contentDescription = "Profile picture",
-            modifier = Modifier.size(50.dp),
+            modifier = if(isDetailScreen) {
+                Modifier.size(150.dp)
+            }else{
+                Modifier.size(50.dp)
+            },
             contentScale = ContentScale.Crop
         )
     }
@@ -107,7 +142,10 @@ fun ProfilePicture() {
 
 @Composable
 fun ProfileContent(name: String) {
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Text(
             text = name,
             style = MaterialTheme.typography.h5
@@ -123,6 +161,12 @@ fun ProfileContent(name: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
-    CodeTheme { MainScreen() }
+fun UsersListScreenDefaultPreview() {
+    CodeTheme { UsersListScreen() }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun UserProfileDetailsScreenDefaultPreview() {
+    CodeTheme { UserProfileDetailsScreen() }
 }
