@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -22,6 +23,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.code.R
 import com.example.code.ui.theme.CodeTheme
 
@@ -29,13 +34,39 @@ class ProfileListActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CodeTheme { UsersListScreen() }
+            CodeTheme { UserApplication() }
+        }
+    }
+}
+
+/**
+ * Using this composable we can determine where to navigate into
+ */
+@Composable
+fun UserApplication(){
+    /**
+     * Just like normal controller navigation also has a state and it has to be remembered
+     */
+    val navController = rememberNavController()
+    /**
+     * Create NavHost that take nav-controller and nav-graph as parameters
+     * Nav-Host allows us to control the actual navigation
+     * Nav-Graph represents all the routes a user can take in a  application
+     */
+    NavHost(navController = navController, startDestination = "users_list"){
+        composable("users_list") {
+            // It takes a composable
+            UsersListScreen(navController)
+        }
+        composable("users_details") {
+            // It takes a composable
+            UserProfileDetailsScreen()
         }
     }
 }
 
 @Composable
-fun UsersListScreen() {
+fun UsersListScreen(navController:NavController?) {
 
     val isDetailsScreen = false
 
@@ -50,7 +81,10 @@ fun UsersListScreen() {
                 val listOfUsers : ArrayList<Userprofile> = userProfileList
                 LazyColumn{
                     items(listOfUsers){ user ->
-                        ProfileCard(name = user.name,isDetailsScreen)
+                        ProfileCard(name = user.name,isDetailsScreen){
+                            // This is called trailing lambda - Since last parameter is a lambda
+                            navController?.navigate("users_details")
+                        }
                     }
                 }
             }
@@ -88,12 +122,18 @@ fun AppBar() {
 }
 
 @Composable
-fun ProfileCard(name: String, isDetailsScreen: Boolean=false) {
+fun ProfileCard(name: String, isDetailsScreen: Boolean=false, clickAction: () -> Unit) {
     Card(
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
-            .wrapContentHeight(align = Alignment.Top),
+            .wrapContentHeight(align = Alignment.Top)
+            .clickable {
+              if(!isDetailsScreen){
+                  // when someone clicks the composable, Invoke it
+                  clickAction.invoke()
+              }
+            },
         elevation = 8.dp
     ) {
         Row(
@@ -162,7 +202,7 @@ fun ProfileContent(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun UsersListScreenDefaultPreview() {
-    CodeTheme { UsersListScreen() }
+    CodeTheme { UsersListScreen(null) }
 }
 
 @Preview(showBackground = true)
