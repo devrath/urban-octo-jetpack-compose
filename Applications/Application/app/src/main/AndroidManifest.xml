@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Compose"
         tools:targetApi="31">
         <activity
-            android:name=".demos.stylingText.StylingTextActivity"
+            android:name=".demos.state.StateActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Compose">
