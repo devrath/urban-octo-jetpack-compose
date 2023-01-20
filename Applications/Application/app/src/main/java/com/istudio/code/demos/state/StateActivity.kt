@@ -31,6 +31,7 @@ class StateActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val counter: MutableState<Int> = remember { mutableStateOf(1) }
             Column(
                 modifier = Modifier
                     .background(Color.DarkGray)
@@ -38,22 +39,27 @@ class StateActivity : ComponentActivity() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                ColorBox()
+                ColorBox(counterText = counter.value.toString()){
+                    counter.value++
+                }
             }
         }
     }
 }
 
 @Composable
-fun ColorBox(modifier: Modifier = Modifier) {
-    val counter: MutableState<Int> = remember { mutableStateOf(1) }
+fun ColorBox(
+    modifier: Modifier = Modifier,
+    counterText: String,
+    clickAction:() -> Unit
+) {
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = counter.value.toString(),
+            text = counterText,
             fontSize = 40.sp,
             color = Color.White
         )
@@ -68,9 +74,9 @@ fun ColorBox(modifier: Modifier = Modifier) {
                 .background(Color.Yellow)
                 .width(100.dp)
                 .height(100.dp)
-                .clickable {
-                    counter.value++
-                },
+                .clickable(
+                    onClick = clickAction
+                ),
             contentAlignment = Alignment.Center
         ) {
             Text(
