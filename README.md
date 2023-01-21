@@ -7,6 +7,11 @@ This repository contains all the samples that helps in learning how jetpack comp
 | ---------------- | ------------------ | ---------------------- | ----------------- |
 | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/imagecard.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/stylingtext.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/state.gif" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/simpleform.gif" width="160" height="330"/> |
 
+| **`List view`** |
+| ----------------|
+| <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/listview.png" width="160" height="330"/> |
+
+
 ## `𝙻𝚎𝚊𝚛𝚗𝚒𝚗𝚐𝚜`
 * Adding a gradient 
 * Creating rounded corners
@@ -19,3 +24,5 @@ This repository contains all the samples that helps in learning how jetpack comp
 * Using a `scaffold`
 * Displaying a `snackbar` on a `button action` by fetching the text from a `input`
 * Using `rememberCoroutineScope` to show a snackbar 
+* Displaying a `list using a column` and making it scrollable
+* Displaying a `list using a lazyColumn` using `itemsIndexed`
