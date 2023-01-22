@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Compose"
         tools:targetApi="31">
         <activity
-            android:name=".demos.sideeffect.demos.launchedEffect.LaunchedEffectActivity"
+            android:name=".demos.sideeffect.demos.sideEffect.SideEffectActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Compose">
@@ -30,6 +30,10 @@
         <activity android:name=".demos.constraintLayout.ConstraintLayoutActivity"/>
         <activity android:name=".demos.sideeffect.SideEffectSelectionActivity"/>
         <activity android:name=".demos.sideeffect.demos.disposableEffect.DisposableEffectActivity"/>
+        <activity android:name=".demos.sideeffect.demos.launchedEffect.LaunchedEffectActivity"/>
+        <activity android:name=".demos.sideeffect.demos.rememberCoroutineScope.RememberCoroutineScopeActivity"/>
+        <activity android:name=".demos.sideeffect.demos.rememberUpdatedState.RememberUpdatedStateActivity"/>
+
     </application>
 
 </manifest>

@@ -16,6 +16,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.istudio.code.R
 import com.istudio.code.demos.sideeffect.demos.disposableEffect.DisposableEffectActivity
+import com.istudio.code.demos.sideeffect.demos.launchedEffect.LaunchedEffectActivity
+import com.istudio.code.demos.sideeffect.demos.rememberCoroutineScope.RememberCoroutineScopeActivity
+import com.istudio.code.demos.sideeffect.demos.rememberUpdatedState.RememberUpdatedStateActivity
+import com.istudio.code.demos.sideeffect.demos.sideEffect.SideEffectActivity
 import com.istudio.code.utils.ButtonSelection
 import com.istudio.code.utils.startActivity
 
@@ -58,13 +62,19 @@ class SideEffectSelectionActivity : ComponentActivity() {
             buttonText = item,
             clickAction = {
                 when (index) {
-                    0 -> startActivity<DisposableEffectActivity>()
+                    0 -> startActivity<LaunchedEffectActivity>()
+                    1 -> startActivity<RememberCoroutineScopeActivity>()
+                    2 -> startActivity<RememberUpdatedStateActivity>()
+                    3 -> startActivity<SideEffectActivity>()
                 }
             }
         )
     }
 
     private fun listOfMainDemo() = listOf(
-        resources.getString(R.string.demo_effect_disposable),//-> 0
+        resources.getString(R.string.demo_launched_effect),//-> 0
+        resources.getString(R.string.demo_remember_coroutine_scope_effect),//-> 1
+        resources.getString(R.string.demo_remember_updated_state),//-> 2
+        resources.getString(R.string.demo_side_effect),//-> 3
     )
 }
