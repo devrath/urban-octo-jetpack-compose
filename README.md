@@ -25,5 +25,5 @@ This repository contains all the samples that helps in learning how jetpack comp
 * Displaying a `snackbar` on a `button action` by fetching the text from a `input`
 * Using `rememberCoroutineScope` to show a snackbar 
 * Displaying a `list using a column` and making it scrollable
-* Displaying a `list using a lazyColumn` using `itemsIndexed`
+* Displaying a `list using a lazyColumn` using `itemsIndexed` and performing `onClick`
 * Simple example of using a `constraint layout` in compose
