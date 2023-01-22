@@ -66,6 +66,7 @@ class SideEffectSelectionActivity : ComponentActivity() {
                     1 -> startActivity<RememberCoroutineScopeActivity>()
                     2 -> startActivity<RememberUpdatedStateActivity>()
                     3 -> startActivity<SideEffectActivity>()
+                    4 -> startActivity<SideEffectActivity>()
                 }
             }
         )
@@ -76,5 +77,6 @@ class SideEffectSelectionActivity : ComponentActivity() {
         resources.getString(R.string.demo_remember_coroutine_scope_effect),//-> 1
         resources.getString(R.string.demo_remember_updated_state),//-> 2
         resources.getString(R.string.demo_side_effect),//-> 3
+        resources.getString(R.string.demo_produce_state),//-> 4
     )
 }

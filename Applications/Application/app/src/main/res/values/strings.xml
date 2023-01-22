@@ -12,6 +12,7 @@
     <string name="demo_remember_coroutine_scope_effect">Remember co-routine scope</string>
     <string name="demo_remember_updated_state">Remember updated state</string>
     <string name="demo_side_effect">Side Effect</string>
+    <string name="demo_produce_state">Produce State</string>
     <string name="demo_effect_disposable">Disposable effect</string>
 
 </resources>
