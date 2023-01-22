@@ -6,4 +6,8 @@
     <string name="demo_simple_form">Simple Form</string>
     <string name="demo_list_view">List View</string>
     <string name="demo_constraint">Constraint Layout</string>
+
+    <string name="demo_effect_selection">Side effect selection</string>
+    <string name="demo_effect_disposable">Disposable effect</string>
+
 </resources>

@@ -28,6 +28,8 @@
         <activity android:name=".demos.simpleform.SimpleFormActivity"/>
         <activity android:name=".demos.list.ListActivity"/>
         <activity android:name=".demos.constraintLayout.ConstraintLayoutActivity"/>
+        <activity android:name=".demos.sideeffect.SideEffectSelectionActivity"/>
+        <activity android:name=".demos.sideeffect.demos.DisposableEffectActivity"/>
     </application>
 
 </manifest>
