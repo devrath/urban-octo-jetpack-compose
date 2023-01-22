@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.istudio.code.R
 import com.istudio.code.demos.sideeffect.demos.disposableEffect.DisposableEffectActivity
 import com.istudio.code.demos.sideeffect.demos.launchedEffect.LaunchedEffectActivity
+import com.istudio.code.demos.sideeffect.demos.produceState.ProduceStateActivity
 import com.istudio.code.demos.sideeffect.demos.rememberCoroutineScope.RememberCoroutineScopeActivity
 import com.istudio.code.demos.sideeffect.demos.rememberUpdatedState.RememberUpdatedStateActivity
 import com.istudio.code.demos.sideeffect.demos.sideEffect.SideEffectActivity
@@ -66,7 +67,8 @@ class SideEffectSelectionActivity : ComponentActivity() {
                     1 -> startActivity<RememberCoroutineScopeActivity>()
                     2 -> startActivity<RememberUpdatedStateActivity>()
                     3 -> startActivity<SideEffectActivity>()
-                    4 -> startActivity<SideEffectActivity>()
+                    4 -> startActivity<ProduceStateActivity>()
+                    5 -> startActivity<DisposableEffectActivity>()
                 }
             }
         )
@@ -78,5 +80,6 @@ class SideEffectSelectionActivity : ComponentActivity() {
         resources.getString(R.string.demo_remember_updated_state),//-> 2
         resources.getString(R.string.demo_side_effect),//-> 3
         resources.getString(R.string.demo_produce_state),//-> 4
+        resources.getString(R.string.demo_effect_disposable),//-> 5
     )
 }
