@@ -15,7 +15,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.istudio.code.R
-import com.istudio.code.demos.sideeffect.demos.DisposableEffectActivity
+import com.istudio.code.demos.sideeffect.demos.disposableEffect.DisposableEffectActivity
 import com.istudio.code.utils.ButtonSelection
 import com.istudio.code.utils.startActivity
 

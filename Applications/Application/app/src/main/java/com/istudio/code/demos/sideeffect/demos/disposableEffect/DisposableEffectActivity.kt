@@ -1,4 +1,4 @@
-package com.istudio.code.demos.sideeffect.demos
+package com.istudio.code.demos.sideeffect.demos.disposableEffect
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
