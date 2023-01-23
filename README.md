@@ -9,7 +9,7 @@ This repository contains all the samples that helps in learning how jetpack comp
 
 | **`List view`** | **`ConstraintLayout`** | **`SideEffect`** | **`JetpackNavigation`** |
 | --------------- | ---------------------- | ---------------- | ---------------- |
-| <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/listview.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/ConstraintLayout.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/SideEffectsSelection.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/navigation.png" width="160" height="330"/> |
+| <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/listview.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/ConstraintLayout.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/SideEffectsSelection.png" width="160" height="330"/> | <img src="https://github.com/devrath/urban-octo-jetpack-compose/blob/main/assets/outputs/navigation.gif" width="160" height="330"/> |
 
 
 ## `𝙻𝚎𝚊𝚛𝚗𝚒𝚗𝚐𝚜`
