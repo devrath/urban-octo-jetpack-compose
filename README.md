@@ -27,3 +27,4 @@ This repository contains all the samples that helps in learning how jetpack comp
 * Displaying a `list using a column` and making it scrollable
 * Displaying a `list using a lazyColumn` using `itemsIndexed` and performing `onClick`
 * Simple example of using a `constraint layout` in compose
+* Different ways of handeling`side-effects` in jetpack compose.
