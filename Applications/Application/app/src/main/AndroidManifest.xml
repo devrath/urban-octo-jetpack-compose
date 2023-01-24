@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Compose"
         tools:targetApi="31">
         <activity
-            android:name=".demos.composeNavigation.ComposeNavigationActivity"
+            android:name=".demos.medicalUi.MedicalUiActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Compose">
@@ -36,7 +36,8 @@
         <activity android:name=".demos.sideeffect.demos.sideEffect.SideEffectActivity"/>
         <activity android:name=".demos.sideeffect.demos.produceState.ProduceStateActivity"/>
         <activity android:name=".demos.sideeffect.demos.derivedStateOf.DerivedStateOfActivity"/>
-        <activity android:name=".demos.medicalUi.MedicalUiActivity"/>
+        <!--<activity android:name=".demos.medicalUi.MedicalUiActivity"/>-->
+        <activity android:name=".demos.composeNavigation.ComposeNavigationActivity"/>
 
     </application>
 
