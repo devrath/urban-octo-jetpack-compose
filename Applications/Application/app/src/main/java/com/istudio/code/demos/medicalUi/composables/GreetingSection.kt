@@ -34,14 +34,14 @@ fun GreetingSection(
                 text = "Good Morning, $name",
                 color = Color.White,
                 style = MaterialTheme.typography.h2,
-                fontSize = 16.sp
+                fontSize = 24.sp
 
             )
             Text(
                 text = "We wish you have a good day!",
                 color = Color.White,
                 style = MaterialTheme.typography.body1,
-                fontSize = 12.sp
+                fontSize = 16.sp
             )
         }
         Icon(
