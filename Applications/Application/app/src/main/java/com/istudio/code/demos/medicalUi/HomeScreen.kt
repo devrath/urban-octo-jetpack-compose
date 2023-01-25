@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -40,11 +42,13 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.istudio.code.R
 import com.istudio.code.demos.medicalUi.composables.ChipsSection
 import com.istudio.code.demos.medicalUi.composables.DailyThought
+import com.istudio.code.demos.medicalUi.composables.FeatureSection
 import com.istudio.code.demos.medicalUi.composables.GreetingSection
 import com.istudio.code.demos.medicalUi.models.Feature
 import com.istudio.code.ui.theme.Beige1
@@ -67,7 +71,6 @@ fun HomeScreen() {
     Box(
         modifier = Modifier
             .background(DeepBlue)
-            .padding(20.dp)
             .fillMaxSize()
     ) {
         Column() {
@@ -78,89 +81,7 @@ fun HomeScreen() {
             Spacer(modifier = Modifier.height(20.dp))
             DailyThought(activity = "Daily Thought", time = "3-10 min")
             Spacer(modifier = Modifier.height(20.dp))
-            Text(
-                text = "Featured",
-                fontSize = 24.sp,
-                color = Color.White,
-                style = MaterialTheme.typography.h2
-            )
-            Spacer(modifier = Modifier.height(20.dp))
-
-            FeatureSection(
-                listOf(
-                    Feature(
-                        title = "Night island",
-                        iconId = R.drawable.ic_moon,
-                        lightColor = Beige1,
-                        mediumColor = Beige2,
-                        darkColor = Beige3
-                    ),
-                    Feature(
-                        title = "Evening island",
-                        iconId = R.drawable.ic_bubble,
-                        lightColor = LightGreen1,
-                        mediumColor = LightGreen2,
-                        darkColor = LightGreen3
-                    ),
-                    Feature(
-                        title = "Morning island",
-                        iconId = R.drawable.ic_music,
-                        lightColor = BlueViolet1,
-                        mediumColor = BlueViolet2,
-                        darkColor = BlueViolet3
-                    )
-                )
-            )
-        }
-    }
-}
-
-@Composable
-fun FeatureSection(featureList: List<Feature>) {
-    val state = rememberLazyGridState()
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        contentPadding = PaddingValues(12.dp),
-        state = state
-    ) {
-
-        items(featureList.size) { feature ->
-            FeatureItem(featureList[feature]){
-            }
-        }
-    }
-}
-
-@Composable
-fun FeatureItem(feature: Feature, onclick:()->Unit) {
-
-    val context = LocalContext.current
-
-    Column(
-        modifier = Modifier
-            .clip(RoundedCornerShape(8.dp))
-            .background(feature.lightColor)
-            .padding(10.dp)
-    ) {
-        Text(text = feature.title, color = Color.White, fontSize = 14.sp)
-        Spacer(modifier = Modifier.height(40.dp))
-        Row(
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Icon(
-                painter = painterResource(id = feature.iconId),
-                contentDescription = feature.title,
-                tint = Color.White
-            )
-            Button(onClick = onclick) {
-                Text(
-                    text = stringResource(id = R.string.start),
-                    fontSize = 12.sp,
-                    color = Color.White
-                )
-            }
+            FeatureSection()
         }
     }
 }

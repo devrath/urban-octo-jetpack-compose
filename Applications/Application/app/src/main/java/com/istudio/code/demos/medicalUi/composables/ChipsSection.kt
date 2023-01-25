@@ -24,7 +24,9 @@ fun ChipsSection(
     chips: List<String>
 ) {
     var selectedChipIndex by remember { mutableStateOf(0) }
-    LazyRow {
+    LazyRow(
+        modifier = Modifier.padding(start = 12.dp, end = 12.dp)
+    ) {
         items(count = chips.size) {
             val startPadding = if(it==0){0.dp}else{10.dp}
 

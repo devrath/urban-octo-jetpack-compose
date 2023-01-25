@@ -23,7 +23,7 @@ import com.istudio.code.ui.theme.LightRed
 
 @Composable
 fun DailyThought(activity: String, time: String) {
-    Box(modifier = Modifier) {
+    Box(modifier = Modifier.padding(start = 12.dp, end = 12.dp)) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
