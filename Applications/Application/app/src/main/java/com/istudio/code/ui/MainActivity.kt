@@ -17,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.istudio.code.R
+import com.istudio.code.demos.books.basicComposableFunction.MainActivityBasicComposableFunction
 import com.istudio.code.demos.constraintLayout.ConstraintLayoutActivity
 import com.istudio.code.demos.imageCard.ImageCardActivity
 import com.istudio.code.demos.list.ListActivity
@@ -74,6 +75,7 @@ class MainActivity : ComponentActivity() {
                     4 -> startActivity<ListActivity>()
                     5 -> startActivity<ConstraintLayoutActivity>()
                     6 -> startActivity<SideEffectSelectionActivity>()
+                    7 -> startActivity<MainActivityBasicComposableFunction>()
                 }
             }
         )
@@ -86,7 +88,8 @@ class MainActivity : ComponentActivity() {
         resources.getString(R.string.demo_simple_form),//-> 3
         resources.getString(R.string.demo_list_view),//-> 4
         resources.getString(R.string.demo_constraint),//-> 5
-        resources.getString(R.string.demo_effect_selection)//-> 6
+        resources.getString(R.string.demo_effect_selection),//-> 6
+        resources.getString(R.string.demo_basic_composable_funcitons)//-> 7
 
     )
 }
