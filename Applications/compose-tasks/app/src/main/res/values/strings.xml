@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">compose-tasks</string>
+    <string name="str_navigate_back">Navigate back</string>
+    <string name="str_add">Add</string>
+    <string name="str_create_label">Create Label</string>
+    <string name="str_label_list_maker">List Maker</string>
+    <string name="str_name_of_list">What is the name of your list?</string>
+    <string name="str_task_hint">Enter name</string>
+    <string name="str_no_tasks_yet">No tasks yet</string>
+    <string name="str_no_todos_yet">No todos for this task</string>
+    <string name="str_task_to_add">What is the task you want to add?</string>
+    <string name="label_task_list">Task List</string>
+</resources>
