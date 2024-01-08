@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Code"
+rootProject.name = "code"
 include(":app")
+ 
