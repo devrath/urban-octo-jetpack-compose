@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.istudio.code.modules.module_demos.ActivityResultContractsDemo
 import com.istudio.code.modules.module_selection.ModuleDemo
 import com.istudio.code.modules.module_selection.ModuleSelectionScreen
 import com.istudio.code.ui.theme.CodeTheme
@@ -39,6 +40,10 @@ class MainActivity : ComponentActivity() {
                         // Selection Screen
                         composable(ModuleDemo.DemoSelection.rout) {
                             ModuleSelectionScreen(navController = navController)
+                        }
+                        // Demo: ActivityResultContractsDemo
+                        composable(ModuleDemo.ActivityResultContractsDemo.rout) {
+                            ActivityResultContractsDemo(navController = navController)
                         }
                     }
                 }
